@@ -15,5 +15,24 @@
             "city": "",
             "state": ""
         }
+    ],
+    "Settlement": [
+        {
+            "id": 1, 
+            "showId": 1,
+            "attachmentUrl": ""
+        }
+    ],
+    "CreditCardReport": [
+        {
+            "id": 1,
+            "userId": 1, 
+            "timestamp": 1,
+            "storeName": "",
+            "city": "",
+            "state": "",
+            "price": "",
+            "attachmentUrl": ""
+        }
     ]
 }
