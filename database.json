@@ -23,6 +23,13 @@
             "attachmentUrl": ""
         }
     ],
+    "DealMemo": [
+        {
+            "id": 1,
+            "showId": 1,
+            "attachmentUrl": ""
+        }
+    ],
     "CreditCardReport": [
         {
             "id": 1,
