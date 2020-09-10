@@ -19,7 +19,7 @@ export const NavBar = (props) => {
                 <Link className="navbar__link" to="/"><CreditCardIcon /></Link>
             </li>
             <li className="navbar__item"> 
-                <Link className="navbar__link" to="/"><AccountBoxIcon /></Link>
+                <Link className="navbar__link" to="/logout"><AccountBoxIcon /></Link>
             </li>
         </ul>
     )

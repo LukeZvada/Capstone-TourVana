@@ -1,45 +1,71 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "",
-            "password": ""
-        }
-    ],
-    "Show": [
-        {
-            "id": 1,
-            "userId": 1,
-            "timestamp": 1,
-            "venueName": "",
-            "city": "",
-            "state": ""
-        }
-    ],
-    "Settlement": [
-        {
-            "id": 1, 
-            "showId": 1,
-            "attachmentUrl": ""
-        }
-    ],
-    "DealMemo": [
-        {
-            "id": 1,
-            "showId": 1,
-            "attachmentUrl": ""
-        }
-    ],
-    "CreditCardReport": [
-        {
-            "id": 1,
-            "userId": 1, 
-            "timestamp": 1,
-            "storeName": "",
-            "city": "",
-            "state": "",
-            "price": "",
-            "attachmentUrl": ""
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Luke",
+      "lastName": "Zvada",
+      "username": "lzvada",
+      "password": "123"
+    },
+    {
+      "email": "Ted",
+      "password": "321",
+      "name": "Ted Jones",
+      "id": 2
+    },
+    {
+      "username": "Ted",
+      "password": "321",
+      "name": "ted ted",
+      "id": 3
+    },
+    {
+      "username": "jthom",
+      "password": "543",
+      "name": "Johnny Thomas",
+      "id": 4
+    },
+    {
+      "username": "first",
+      "password": "123",
+      "name": "first last",
+      "id": 5
+    }
+  ],
+  "Show": [
+    {
+      "id": 1,
+      "userId": 1,
+      "timestamp": 1,
+      "venueName": "",
+      "city": "",
+      "state": ""
+    }
+  ],
+  "Settlement": [
+    {
+      "id": 1,
+      "showId": 1,
+      "attachmentUrl": ""
+    }
+  ],
+  "DealMemo": [
+    {
+      "id": 1,
+      "showId": 1,
+      "attachmentUrl": ""
+    }
+  ],
+  "CreditCardReport": [
+    {
+      "id": 1,
+      "userId": 1,
+      "timestamp": 1,
+      "storeName": "",
+      "city": "",
+      "state": "",
+      "price": "",
+      "attachmentUrl": ""
+    }
+  ]
 }
