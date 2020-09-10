@@ -10,8 +10,6 @@ export const ShowList = (props) => {
     const { shows, getShows } = useContext(ShowContext)
     const { users, getUsers } = useContext(UserContext)
 
-    console.log(users)
-
     useEffect(() => {
         getShows()
         getUsers()
@@ -30,12 +28,12 @@ export const ShowList = (props) => {
 
     return (
         <>
-            <article className="welcome">
+            <article className="welcomeMessage">
                 {
                     users.map(user => {
                         const currentUser = users.find(currentUser => currentUser.id === user.id) || {}
                             return <section key={user.id} className="user">
-                            <div><h1>Welcome, {currentUser.firstName}</h1></div>
+                            <div><h1 className="welcomeTitle">Welcome, {currentUser.firstName}</h1></div>
                             </section>
                     
                     })
