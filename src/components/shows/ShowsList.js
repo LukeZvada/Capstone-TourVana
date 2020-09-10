@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react"
 import { ShowContext } from "./ShowsProvider"
+import { UserContext } from "../users/UsersProvider"
 import "./Shows.css"
 import { makeStyles } from '@material-ui/core/styles';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
@@ -7,10 +8,13 @@ import Button from '@material-ui/core/Button';
 
 export const ShowList = (props) => {
     const { shows, getShows } = useContext(ShowContext)
+    const { users, getUsers } = useContext(UserContext)
 
+    console.log(users)
 
     useEffect(() => {
         getShows()
+        getUsers()
     }, [])
 
     const useStyles = makeStyles((theme) => ({
@@ -26,6 +30,17 @@ export const ShowList = (props) => {
 
     return (
         <>
+            <article className="welcome">
+                {
+                    users.map(user => {
+                        const currentUser = users.find(currentUser => currentUser.id === user.id) || {}
+                            return <section key={user.id} className="user">
+                            <div><h1>Welcome, {currentUser.firstName}</h1></div>
+                            </section>
+                    
+                    })
+                }
+            </article>
             <article className="showsContainer">
                 {
                     shows.map(show => {
@@ -44,3 +59,10 @@ export const ShowList = (props) => {
     )
 
 }
+// employees.map(employee => {
+//     const employeeLocation = locations.find(location => location.id === employee.locationId) || {}
+//     return <section key={employee.id} className="employee">
+//         <div><h3>{employee.name}</h3></div>
+//         <div>Address: {employeeLocation.name}</div>
+//     </section>
+// })

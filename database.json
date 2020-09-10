@@ -6,30 +6,6 @@
       "lastName": "Zvada",
       "username": "lzvada",
       "password": "123"
-    },
-    {
-      "email": "Ted",
-      "password": "321",
-      "name": "Ted Jones",
-      "id": 2
-    },
-    {
-      "username": "Ted",
-      "password": "321",
-      "name": "ted ted",
-      "id": 3
-    },
-    {
-      "username": "jthom",
-      "password": "543",
-      "name": "Johnny Thomas",
-      "id": 4
-    },
-    {
-      "username": "first",
-      "password": "123",
-      "name": "first last",
-      "id": 5
     }
   ],
   "show": [
