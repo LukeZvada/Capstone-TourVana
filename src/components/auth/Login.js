@@ -62,7 +62,6 @@ export const Login = props => {
                 <form className="form--login" onSubmit={handleLogin}>
                     <img src={ require('../images/TourVanaLogo.png') } />
                     <fieldset>
-                        <label htmlFor="inputUsername"> username </label>
                         <input ref={username} type="username"
                             id="username"
                             className="form-control"
@@ -70,7 +69,6 @@ export const Login = props => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="inputPassword"> Password </label>
                         <input ref={password} type="password"
                             id="password"
                             className="form-control"

@@ -1,4 +1,6 @@
 import React, { useRef } from "react"
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import "./Login.css"
 
 export const Register = (props) => {
@@ -45,6 +47,21 @@ export const Register = (props) => {
         }
     }
 
+    const useStyles = makeStyles((theme) => ({
+        root: {
+            '& > *': {
+                margin: theme.spacing(1),
+                background: "#EB5757",
+                color: "#FFFFFF",
+                width: "300px",
+                borderRadius: "5rem"
+            },
+ 
+        },
+    }));
+    
+    const classes = useStyles()
+
     return (
         <main style={{ textAlign: "center" }}>
 
@@ -54,9 +71,9 @@ export const Register = (props) => {
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Tourvana</h1>
+            <img src={ require('../images/TourVanaLogo.png') } />
                 <fieldset>
-                    <label htmlFor="firstName"> First Name </label>
+                    <label htmlFor="firstName"> </label>
                     <input ref={firstName} type="text"
                         name="firstName"
                         className="form-control"
@@ -64,7 +81,7 @@ export const Register = (props) => {
                         required autoFocus />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="lastName"> Last Name </label>
+                    <label htmlFor="lastName"> </label>
                     <input ref={lastName} type="text"
                         name="lastName"
                         className="form-control"
@@ -72,7 +89,7 @@ export const Register = (props) => {
                         required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="inputUsername"> Username </label>
+                    <label htmlFor="inputUsername">  </label>
                     <input ref={username} type="username"
                         name="username"
                         className="form-control"
@@ -80,7 +97,7 @@ export const Register = (props) => {
                         required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="inputPassword"> Password </label>
+                    <label htmlFor="inputPassword">  </label>
                     <input ref={password} type="password"
                         name="password"
                         className="form-control"
@@ -88,7 +105,7 @@ export const Register = (props) => {
                         required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="verifyPassword"> Verify Password </label>
+                    <label htmlFor="verifyPassword">  </label>
                     <input ref={verifyPassword} type="password"
                         name="verifyPassword"
                         className="form-control"
@@ -96,9 +113,11 @@ export const Register = (props) => {
                         required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit">
-                        Sign in
-                    </button>
+                    <div className={classes.root}>
+                        <Button className="loginButton" variant="contained" type="submit">
+                            Sign in
+                        </Button>
+                    </div>
                 </fieldset>
             </form>
         </main>
