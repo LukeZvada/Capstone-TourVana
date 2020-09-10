@@ -11,6 +11,6 @@ export const TourVana = () => (
 
     <>
         <NavBar />
-        <Cloudinary />
+        {/* <Cloudinary /> */}
     </>
 )
