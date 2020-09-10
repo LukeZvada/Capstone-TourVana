@@ -32,31 +32,31 @@
       "id": 5
     }
   ],
-  "Show": [
+  "show": [
     {
       "id": 1,
       "userId": 1,
-      "timestamp": 1,
-      "venueName": "",
-      "city": "",
-      "state": ""
+      "timestamp": 12182020,
+      "venueName": "Ascend Amplitheatre",
+      "city": "Nashville",
+      "state": "TN"
     }
   ],
-  "Settlement": [
+  "settlement": [
     {
       "id": 1,
       "showId": 1,
       "attachmentUrl": ""
     }
   ],
-  "DealMemo": [
+  "dealMemo": [
     {
       "id": 1,
       "showId": 1,
       "attachmentUrl": ""
     }
   ],
-  "CreditCardReport": [
+  "creditCardReport": [
     {
       "id": 1,
       "userId": 1,

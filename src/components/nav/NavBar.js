@@ -10,13 +10,13 @@ export const NavBar = (props) => {
     return ( 
         <ul className="navbar">
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/"><HomeIcon /></Link>
+                <Link className="navbar__link" to="/show"><HomeIcon /></Link>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/"><TimelineIcon /></Link>
+                <Link className="navbar__link" to="/settlement"><TimelineIcon /></Link>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/"><CreditCardIcon /></Link>
+                <Link className="navbar__link" to="/creditCardReport"><CreditCardIcon /></Link>
             </li>
             <li className="navbar__item"> 
                 <Link className="navbar__link" to="/logout"><AccountBoxIcon /></Link>

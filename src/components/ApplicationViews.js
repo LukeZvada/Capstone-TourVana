@@ -1,11 +1,15 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { ShowProvider } from "./shows/ShowsProvider"
+import { ShowList } from "./shows/ShowsList"
 
 
 export const ApplicationViews = (props) => {
     return (
         <>
-            <div>Tourvana</div>
+            <ShowProvider>
+                <ShowList />
+            </ShowProvider>
 
             <Route path="/logout" render={
                 (props) => {
