@@ -42,7 +42,16 @@ export const Login = props => {
                 width: "300px",
                 borderRadius: "5rem"
             },
- 
+        },
+        buttonStyle: {
+            '& > *': {
+                margin: theme.spacing(1),
+                background: "#EB5757",
+                color: "#FFFFFF",
+                width: "80px",
+                height: "20px",
+                borderRadius: "5rem"
+            },
         },
     }));
     
@@ -51,12 +60,16 @@ export const Login = props => {
     return (
         <main className="container--login">
             <dialog className="dialog dialog--auth" ref={existDialog}>
-                <div>User does not exist</div>
-                <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
+                <div>The username does not exist.</div>
+                <div className={classes.buttonStyle}>
+                    <Button className="button--close" variant="contained" onClick={e => existDialog.current.close()}>Close</Button>
+                </div>
             </dialog>
             <dialog className="dialog dialog--password" ref={passwordDialog}>
-                <div>Password does not match</div>
-                <button className="button--close" onClick={e => passwordDialog.current.close()}>Close</button>
+                <div>Your password does not match the username.</div>
+                <div className={classes.buttonStyle}>
+                    <Button className="button--close" variant="contained" onClick={e => passwordDialog.current.close()}>Close</Button>
+                </div>
             </dialog>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>

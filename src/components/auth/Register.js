@@ -56,7 +56,16 @@ export const Register = (props) => {
                 width: "300px",
                 borderRadius: "5rem"
             },
- 
+        },
+        buttonStyle: {
+            '& > *': {
+                margin: theme.spacing(1),
+                background: "#EB5757",
+                color: "#FFFFFF",
+                width: "80px",
+                height: "20px",
+                borderRadius: "5rem"
+            },
         },
     }));
     
@@ -67,7 +76,9 @@ export const Register = (props) => {
 
             <dialog className="dialog dialog--password" ref={passwordDialog}>
                 <div>Passwords do not match</div>
-                <button className="button--close" onClick={e => passwordDialog.current.close()}>Close</button>
+                <div className={classes.buttonStyle}>
+                     <Button className="button--close" variant="contained" onClick={e => passwordDialog.current.close()}>Close</Button>
+                </div>            
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
