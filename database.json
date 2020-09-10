@@ -7,6 +7,13 @@
         }
     ],
     "Show": [
-        
+        {
+            "id": 1,
+            "userId": 1,
+            "timestamp": 1,
+            "venueName": "",
+            "city": "",
+            "state": ""
+        }
     ]
 }
