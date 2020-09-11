@@ -4,6 +4,8 @@ import { ShowProvider } from "./shows/ShowsProvider"
 import { ShowList } from "./shows/ShowsList"
 import { ShowForm } from "./shows/ShowsForm"
 import { UserProvider } from "./users/UsersProvider"
+import { CCReportProvider } from "./creditCardReports/CreditCardProvider"
+import { PurchaseList } from "./creditCardReports/CreditCardList"
 
 
 export const ApplicationViews = (props) => {
@@ -27,6 +29,12 @@ export const ApplicationViews = (props) => {
                     }}>
                 </Route>
             </ShowProvider>
+
+            <CCReportProvider>
+                <Route exact path="/creditCardReport" render={(props) => {
+                        return <PurchaseList history={props.history} />
+                    }} />
+            </CCReportProvider>
 
 
             <Route path="/logout" render={

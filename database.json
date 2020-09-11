@@ -38,16 +38,5 @@
       "attachmentUrl": ""
     }
   ],
-  "creditCardReport": [
-    {
-      "id": 1,
-      "userId": 1,
-      "timestamp": 1,
-      "storeName": "",
-      "city": "",
-      "state": "",
-      "price": "",
-      "attachmentUrl": ""
-    }
-  ]
+  "creditCardReport": []
 }

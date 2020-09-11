@@ -1,14 +1,7 @@
 import React, { useState } from "react"
 
-/*
-    The context is imported and used by individual components
-    that need data
-*/
 export const CreditCardReportContext = React.createContext()
 
-/*
- This component establishes what data can be used.
- */
 export const CCReportProvider = (props) => {
     const [purchase, setPurchase] = useState([])
 
@@ -30,14 +23,14 @@ export const CCReportProvider = (props) => {
     }
 
     const deletePurchase = (purchaseId) => {
-        return fetch(`http://localhost:8088/show/${purchaseId}`, {
+        return fetch(`http://localhost:8088/creditCardReport/${purchaseId}`, {
             method: "DELETE"
         })
             .then(getPurchase)
     }
 
     const editPurchase = purchase => {
-        return fetch(`http://localhost:8088/show/${purchase.id}`, {
+        return fetch(`http://localhost:8088/creditCardReport/${purchase.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -46,17 +39,12 @@ export const CCReportProvider = (props) => {
         })
             .then(getPurchase)
     }
-    /*
-        You return a context provider which has the
-        `shows` state, the `addShow` function,
-        and the `getShow` function as keys. This
-        allows any child elements to access them.
-    */
+
     return (
-        <ShowContext.Provider value={{
+        <CreditCardReportContext.Provider value={{
             purchase, getPurchase, addPurchase, deletePurchase, editPurchase
         }}>
             {props.children}
-        </ShowContext.Provider>
+        </CreditCardReportContext.Provider>
     )
 }
