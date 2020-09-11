@@ -72,7 +72,10 @@ export const ShowList = (props) => {
                                                 }>
                                                 <DeleteIcon className={classes.primary} /> 
                                             </button>
-                                            <button className="deleteShowButton">
+                                            <button className="deleteShowButton" 
+                                                onClick={() => {
+                                                        props.history.push(`/show/edit/${show.id}`)
+                                                }}>
                                                 <EditIcon className={classes.primary} /> 
                                             </button>
                                             <button className="deleteShowButton">

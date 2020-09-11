@@ -22,6 +22,10 @@ export const ApplicationViews = (props) => {
                         return <ShowForm {...props}/>
                     }}>
                 </Route>
+                <Route path="/show/edit" render ={(props) => {
+                        return <ShowForm {...props}/>
+                    }}>
+                </Route>
             </ShowProvider>
 
 

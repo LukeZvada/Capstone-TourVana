@@ -1,39 +1,40 @@
-import React, { useContext, useRef, useEffect } from "react"
+import React, { useContext, useRef, useEffect, useState } from "react"
 import { ShowContext } from "./ShowsProvider"
 import "./Shows.css"
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
 export const ShowForm = (props) => {
-    const { addShow, getShows } = useContext(ShowContext)
+    const { addShow, getShows, shows } = useContext(ShowContext)
 
-    /*
-        Create references that can be attached to the input
-        fields in the form. This will allow you to get the
-        value of the input fields later when the user clicks
-        the save button.
+    const [show, setShow] = useState({})
 
-        No more `document.querySelector()` in React.
-    */
+    const editMode = props.match.params.hasOwnProperty("showId")
+
     const venueName = useRef(null)
     const city = useRef(null)
     const state = useRef(null)
     const date = useRef(null)
 
-    /*
-        Get animal state and location state on initialization.
-    */
+
+
+   const getShowInEditMode = () => {
+    if (editMode) {
+        const showId = parseInt(props.match.params.showId)
+        const selectedShow = shows.find(show => show.id === showId) || {}
+        setShow(selectedShow)
+    }
+}
+
     useEffect(() => {
        getShows()
     }, [])
 
+    useEffect(() => {
+        getShowInEditMode()
+    }, [shows])
+
     const constructNewShow = () => {
-        /*
-            The `location` and `animal` variables below are
-            the references attached to the input fields. You
-            can't just ask for the `.value` property directly,
-            but rather `.current.value` now in React.
-        */
 
         if (venueName === 0) {
             window.alert("Please type a venue")
@@ -104,7 +105,7 @@ export const ShowForm = (props) => {
             <section className={classes.buttonStyle}>
                 <Button className="saveShowButton" variant="contained" type="submit"
                     onClick={evt => {
-                        evt.preventDefault() // Prevent browser from submitting the form
+                        evt.preventDefault() 
                         constructNewShow()
                     }}
                     className="btn btn-primary">
