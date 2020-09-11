@@ -36,7 +36,16 @@ export const ShowProvider = (props) => {
             .then(getShows)
     }
 
-
+    const editShow = show => {
+        return fetch(`http://localhost:8088/show/${show.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(show)
+        })
+            .then(getShows)
+    }
     /*
         You return a context provider which has the
         `shows` state, the `addShow` function,
