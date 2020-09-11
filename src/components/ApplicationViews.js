@@ -22,7 +22,7 @@ export const ApplicationViews = (props) => {
                         return <ShowForm {...props}/>
                     }}>
                 </Route>
-                <Route path="/show/edit" render ={(props) => {
+                <Route path="/show/edit/:showId(\d+)" render ={(props) => {
                         return <ShowForm {...props}/>
                     }}>
                 </Route>

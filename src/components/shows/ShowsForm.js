@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useEffect, useState, useRef } from "react"
 import { ShowContext } from "./ShowsProvider"
 import "./Shows.css"
 import Button from '@material-ui/core/Button';
@@ -8,14 +8,9 @@ export const ShowForm = (props) => {
     const { addShow, getShows, shows, editShow } = useContext(ShowContext)
 
     const [show, setShow] = useState({})
-    console.log(show)
 
     const editMode = props.match.params.hasOwnProperty("showId")
 
-    // const venueName = useRef(null)
-    // const city = useRef(null)
-    // const state = useRef(null)
-    // const date = useRef(null)
 
     const handleControlledInputChange = (event) => {
 
@@ -43,11 +38,7 @@ export const ShowForm = (props) => {
 
     const constructNewShow = () => {
 
-        if (show.id === 0) {
-            window.alert("Please select a location")
-        } else {
             if (editMode) {
-                // PUT
                 editShow({
                     id: show.id,
                     venueName: show.venueName,
@@ -57,9 +48,7 @@ export const ShowForm = (props) => {
                 })
                     .then(() => props.history.push("/show"))
             } else {
-                // POST
                 addShow({
-                    name: show.venueName,
                     venueName: show.venueName,
                     city: show.city,
                     state: show.state,
@@ -68,7 +57,6 @@ export const ShowForm = (props) => {
                     .then(() => props.history.push("/show"))
             }
         }
-    }
 
     const useStyles = makeStyles((theme) => ({
         root: {

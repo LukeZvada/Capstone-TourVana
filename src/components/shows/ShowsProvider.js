@@ -54,7 +54,7 @@ export const ShowProvider = (props) => {
     */
     return (
         <ShowContext.Provider value={{
-            shows, addShow, getShows, deleteShow
+            shows, addShow, getShows, deleteShow, editShow
         }}>
             {props.children}
         </ShowContext.Provider>

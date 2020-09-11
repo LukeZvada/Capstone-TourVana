@@ -13,9 +13,7 @@ export const TourVana = () => (
 
     <>
         <Route render={() => {
-            console.log(localStorage.getItem("tourVana_username"))
             if (localStorage.getItem("tourVana_username")) {
-                console.log("the user is logged in")
                 return (
                     <>
                         <Route render={props => <NavBar {...props} />} />
