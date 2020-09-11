@@ -42,11 +42,11 @@ export const PurchaseList = (props) => {
     return (
         <>
 
-            <article className="creditCardImage"> 
-                
+            <article> 
+            <img className="creditCardImage" src={ require('../images/amex.png') } />
             </article>
             <article>
-                <div><h2 className="Expenses">Expenses</h2></div>
+                <div><h2 className="expenses">Expenses</h2></div>
             </article>
 
             <article className="purchaseContainer">

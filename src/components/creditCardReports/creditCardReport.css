@@ -1,0 +1,22 @@
+.creditCardImage { 
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.expenses { 
+    display: flex;
+    justify-content: center;
+    letter-spacing: 10px;
+}
+
+.addPurchaseButton {
+    position: fixed;
+    bottom: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    box-shadow: 0px -1px 8px 0px rgba(163, 163,163,1);
+}
