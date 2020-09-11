@@ -29,6 +29,14 @@ export const ShowProvider = (props) => {
             .then(getShows)
     }
 
+    const deleteShow = (showId) => {
+        return fetch(`http://localhost:8088/show/${showId}`, {
+            method: "DELETE"
+        })
+            .then(getShows)
+    }
+
+
     /*
         You return a context provider which has the
         `shows` state, the `addShow` function,
@@ -37,7 +45,7 @@ export const ShowProvider = (props) => {
     */
     return (
         <ShowContext.Provider value={{
-            shows, addShow, getShows
+            shows, addShow, getShows, deleteShow
         }}>
             {props.children}
         </ShowContext.Provider>

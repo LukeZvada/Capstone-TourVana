@@ -10,8 +10,9 @@ import EditIcon from '@material-ui/icons/Edit';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
 export const ShowList = (props) => {
-    const { shows, getShows } = useContext(ShowContext)
+    const { shows, getShows, deleteShow } = useContext(ShowContext)
     const { users, getUsers } = useContext(UserContext)
+  
 
     useEffect(() => {
         getShows()
@@ -30,6 +31,12 @@ export const ShowList = (props) => {
             margin: 0
           },
         },
+        primary: {
+          '& > *': {
+            color: "white"
+          },
+        },
+
       }));
 
     const classes = useStyles()
@@ -56,9 +63,22 @@ export const ShowList = (props) => {
                 {
                     shows.map(show => {
                             return <section key={show.id} className="shows">
-                                        <div className="showDate">{show.timestamp} &curren; &nbsp; </div>
+                                        <div className="showDate">{show.date} &curren; &nbsp; </div>
                                         <div className="showLocation"> {show.venueName} - {show.city}, {show.state} </div> 
-                                        <div className="showIcons"> <DeleteIcon /> <EditIcon /> <AssignmentIcon /> </div>
+                                        <div className="showIcons"> 
+                                            <button className="deleteShowButton" variant="contained"
+                                                onClick={
+                                                    () => deleteShow(show.id).then(props.history.push("/show"))
+                                                }>
+                                                <DeleteIcon className={classes.primary} /> 
+                                            </button>
+                                            <button className="deleteShowButton">
+                                                <EditIcon className={classes.primary} /> 
+                                            </button>
+                                            <button className="deleteShowButton">
+                                                <AssignmentIcon className={classes.primary} /> 
+                                            </button>
+                                        </div>
                                     </section>
                             
                     })

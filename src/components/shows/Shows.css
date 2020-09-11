@@ -18,6 +18,12 @@
     box-shadow: 0px -1px 8px 0px rgba(163, 163,163,1);
 }
 
+.deleteShowButton { 
+    border: none;
+    background-color: #EB5757;
+    
+}
+
 .shows { 
     display: flex;
     /* justify-content: center; */

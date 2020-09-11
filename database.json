@@ -10,49 +10,11 @@
   ],
   "show": [
     {
-      "id": 1,
-      "userId": 1,
-      "timestamp": 1218,
-      "venueName": "Ascend Amplitheatre",
+      "venueName": "Exit Inn",
       "city": "Nashville",
-      "state": "TN"
-    },
-    {
-      "id": 1,
-      "userId": 1,
-      "timestamp": 1220,
-      "venueName": "The Ritz",
-      "city": "Raleigh",
-      "state": "NC"
-    },
-    {
-      "id": 1,
-      "userId": 1,
-      "timestamp": 1222,
-      "venueName": "Music Farm",
-      "city": "Charleston",
-      "state": "SC"
-    },
-    {
-      "venueName": "hey",
-      "city": "hey",
-      "state": "hey",
-      "date": "hey",
-      "id": 2
-    },
-    {
-      "venueName": "",
-      "city": "",
-      "state": "",
-      "date": "",
-      "id": 3
-    },
-    {
-      "venueName": "",
-      "city": "",
-      "state": "",
-      "date": "",
-      "id": 4
+      "state": "TN",
+      "date": "12/20/20",
+      "id": 1
     }
   ],
   "settlement": [
