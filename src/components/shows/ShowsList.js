@@ -5,6 +5,9 @@ import "./Shows.css"
 import { makeStyles } from '@material-ui/core/styles';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete';
+import EditIcon from '@material-ui/icons/Edit';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
 export const ShowList = (props) => {
     const { shows, getShows } = useContext(ShowContext)
@@ -19,7 +22,12 @@ export const ShowList = (props) => {
         root: {
           '& > *': {
             margin: theme.spacing(1),
-            color: "#EB5757"
+            color: "#EB5757",
+            position: "fixed",
+            display: "flex",
+            bottom: 0,
+            background: "white",
+            margin: 0
           },
         },
       }));
@@ -39,17 +47,25 @@ export const ShowList = (props) => {
                     })
                 }
             </article>
+            
+            <article>
+                <div><h2 className="upcomingShows">Upcoming Shows</h2></div>
+            </article>
+
             <article className="showsContainer">
                 {
                     shows.map(show => {
                             return <section key={show.id} className="shows">
-                                        <div>{show.timestamp} {show.venueName} {show.city} {show.state}</div>
+                                        <div className="showDate">{show.timestamp} &curren; &nbsp; </div>
+                                        <div className="showLocation"> {show.venueName} - {show.city}, {show.state} </div> 
+                                        <div className="showIcons"> <DeleteIcon /> <EditIcon /> <AssignmentIcon /> </div>
                                     </section>
+                            
                     })
                 }
             </article>
             <section className={classes.root}>
-                <Button onClick={() => props.history.push("/show/create")}>
+                <Button className="addShowButton" onClick={() => props.history.push("/show/create")}>
                     <AddCircleOutlineIcon />
                 </Button>
             </section>
@@ -57,10 +73,3 @@ export const ShowList = (props) => {
     )
 
 }
-// employees.map(employee => {
-//     const employeeLocation = locations.find(location => location.id === employee.locationId) || {}
-//     return <section key={employee.id} className="employee">
-//         <div><h3>{employee.name}</h3></div>
-//         <div>Address: {employeeLocation.name}</div>
-//     </section>
-// })

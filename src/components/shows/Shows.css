@@ -2,3 +2,43 @@
     display: flex;
     justify-content: center;
 }
+
+.upcomingShows { 
+    display: flex;
+    justify-content: center;
+}
+
+.addShowButton {
+    position: fixed;
+    bottom: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    box-shadow: 0px -1px 8px 0px rgba(163, 163,163,1);
+}
+
+.shows { 
+    display: flex;
+    /* justify-content: center; */
+    background-color: #EB5757;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5rem;
+    color: #FFFFFF;
+}
+
+.showDate {
+    display: flex;
+    justify-content: left;
+}
+
+.showLocation {
+    display: flex;
+    justify-content: center;
+}
+
+.showIcons {
+    float: right;
+}
