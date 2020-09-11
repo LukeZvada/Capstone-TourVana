@@ -6,6 +6,8 @@ import { ShowForm } from "./shows/ShowsForm"
 import { UserProvider } from "./users/UsersProvider"
 import { CCReportProvider } from "./creditCardReports/CreditCardProvider"
 import { PurchaseList } from "./creditCardReports/CreditCardList"
+import { PurchaseForm } from "./creditCardReports/CreditCardForm"
+
 
 
 export const ApplicationViews = (props) => {
@@ -34,6 +36,17 @@ export const ApplicationViews = (props) => {
                 <Route exact path="/creditCardReport" render={(props) => {
                         return <PurchaseList history={props.history} />
                     }} />
+            </CCReportProvider>
+
+            <CCReportProvider>
+                <Route path="/creditCardReport/create" render ={(props) => {
+                        return <PurchaseForm {...props}/>
+                    }}>
+                </Route>
+                <Route path="/creditCardReport/edit/:purchaseId(\d+)" render ={(props) => {
+                        return <PurchaseForm {...props}/>
+                    }}>
+                </Route>
             </CCReportProvider>
 
 

@@ -38,5 +38,27 @@
       "attachmentUrl": ""
     }
   ],
-  "creditCardReport": []
+  "creditCardReport": [
+    {
+      "id": 1,
+      "userId": 1,
+      "date": "12/15",
+      "storeName": "Parker",
+      "city": "New York",
+      "state": "NY",
+      "price": 500,
+      "attachmentUrl": ""
+    },
+    {
+      "id": 2
+    },
+    {
+      "storeName": "test",
+      "city": "teste",
+      "state": "Test",
+      "price": "test",
+      "date": "test",
+      "id": 3
+    }
+  ]
 }

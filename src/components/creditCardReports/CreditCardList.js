@@ -52,7 +52,7 @@ export const PurchaseList = (props) => {
             <article className="purchaseContainer">
                 {
                     purchase.map(purchase => {
-                            return <section key={purchase.id} className="purchase">
+                            return <section key={purchase.id} className="purchases">
                                         <div className="purchaseDate">{purchase.date} &curren; &nbsp; </div>
                                         <div className="storeName"> {purchase.storeName}</div> 
                                         <div className="storeCity"> {purchase.city}</div> 
