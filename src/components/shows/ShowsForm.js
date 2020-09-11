@@ -1,6 +1,8 @@
 import React, { useContext, useRef, useEffect } from "react"
 import { ShowContext } from "./ShowsProvider"
 import "./Shows.css"
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
 
 export const ShowForm = (props) => {
     const { addShow, getShows } = useContext(ShowContext)
@@ -48,6 +50,30 @@ export const ShowForm = (props) => {
         }
     }
 
+    const useStyles = makeStyles((theme) => ({
+        root: {
+            '& > *': {
+                margin: theme.spacing(1),
+                background: "#EB5757",
+                color: "#FFFFFF",
+                width: "300px",
+                borderRadius: "5rem"
+            },
+        },
+        buttonStyle: {
+            '& > *': {
+                margin: theme.spacing(1),
+                background: "#EB5757",
+                color: "#FFFFFF",
+                width: "180px",
+                height: "20px",
+                borderRadius: "5rem"
+            },
+        },
+    }));
+    
+    const classes = useStyles()
+
     return (
         <form className="showForm">
             <h2 className="showForm__title">New Show</h2>
@@ -75,15 +101,16 @@ export const ShowForm = (props) => {
                     <input type="text" id="showDate" ref={date} required autoFocus className="form-control" placeholder="Date" />
                 </div>
             </fieldset>
-
-            <button type="submit"
-                onClick={evt => {
-                    evt.preventDefault() // Prevent browser from submitting the form
-                    constructNewShow()
-                }}
-                className="btn btn-primary">
-                Save Show
-            </button>
+            <section className={classes.buttonStyle}>
+                <Button className="saveShowButton" variant="contained" type="submit"
+                    onClick={evt => {
+                        evt.preventDefault() // Prevent browser from submitting the form
+                        constructNewShow()
+                    }}
+                    className="btn btn-primary">
+                    Save Show
+                </Button>
+            </section>
         </form>
     )
 }
