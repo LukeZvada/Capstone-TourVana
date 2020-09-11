@@ -58,6 +58,7 @@ export const ShowForm = (props) => {
             }
         }
 
+
     const useStyles = makeStyles((theme) => ({
         root: {
             '& > *': {
@@ -75,7 +76,7 @@ export const ShowForm = (props) => {
                 color: "#FFFFFF",
                 width: "180px",
                 height: "20px",
-                borderRadius: "5rem"
+                borderRadius: "5rem",
             },
         },
     }));
@@ -84,7 +85,7 @@ export const ShowForm = (props) => {
 
     return (
         <form className="showForm">
-            <h2 className="showForm__title">{editMode ? "Update Show" : "Add Show"}</h2>
+            
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="venueName"></label>

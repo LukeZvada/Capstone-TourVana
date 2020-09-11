@@ -10,12 +10,11 @@
   ],
   "show": [
     {
-      "name": "Exit Inn",
+      "id": 1,
       "venueName": "Exit Inn",
       "city": "Nashville",
       "state": "TN",
-      "date": "12-20-20",
-      "id": 1
+      "date": "12-20-20"
     },
     {
       "id": 2,
