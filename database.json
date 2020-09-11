@@ -40,23 +40,12 @@
   ],
   "creditCardReport": [
     {
-      "id": 1,
-      "storeName": "Parkerdsgasffg",
-      "city": "New York",
-      "state": "NY",
-      "price": 500,
-      "date": "12/15"
-    },
-    {
-      "id": 2
-    },
-    {
-      "storeName": "test",
-      "city": "teste",
-      "state": "Test",
-      "price": "test",
-      "date": "test",
-      "id": 3
+      "storeName": "Kroger",
+      "city": "Nashville",
+      "state": "TN",
+      "price": "40",
+      "date": "12/20/20",
+      "id": 1
     }
   ]
 }
