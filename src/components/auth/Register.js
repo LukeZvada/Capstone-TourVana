@@ -39,7 +39,7 @@ export const Register = (props) => {
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 localStorage.setItem("tourVana_username", createdUser.id)
-                                props.history.push("/")
+                                props.history.push("/show")
                             }
                         })
                 })
