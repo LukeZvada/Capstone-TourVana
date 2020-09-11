@@ -93,7 +93,7 @@ export const PurchaseForm = (props) => {
                     <label htmlFor="storeName"></label>
                     <input type="text" name="storeName" required autoFocus className="form-control"
                         placeholder="Store Name"
-                        defaultValue={purchase.storeName}
+                        defaultValue={purchases.storeName}
                         onChange={handleControlledInputChange}
                     />
                 </div>
@@ -103,7 +103,7 @@ export const PurchaseForm = (props) => {
                     <label htmlFor="city"></label>
                     <input type="text" name="city" required className="form-control"
                         placeholder="City"
-                        defaultValue={purchase.city}
+                        defaultValue={purchases.city}
                         onChange={handleControlledInputChange}
                     />
                 </div>
@@ -113,7 +113,7 @@ export const PurchaseForm = (props) => {
                     <label htmlFor="state"></label>
                     <input type="text" name="state" required className="form-control"
                         placeholder="State"
-                        defaultValue={purchase.state}
+                        defaultValue={purchases.state}
                         onChange={handleControlledInputChange}
                     />
                 </div>
@@ -123,7 +123,7 @@ export const PurchaseForm = (props) => {
                     <label htmlFor="price"></label>
                     <input type="text" name="price" required className="form-control"
                         placeholder="Price"
-                        defaultValue={purchase.price}
+                        defaultValue={purchases.price}
                         onChange={handleControlledInputChange}
                     />
                 </div>
@@ -133,7 +133,7 @@ export const PurchaseForm = (props) => {
                     <label htmlFor="date"></label>
                     <input type="text" name="date" required className="form-control"
                         placeholder="Date"
-                        defaultValue={purchase.date}
+                        defaultValue={purchases.date}
                         onChange={handleControlledInputChange}
                     />
                 </div>

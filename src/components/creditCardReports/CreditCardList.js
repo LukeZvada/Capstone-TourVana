@@ -67,7 +67,7 @@ export const PurchaseList = (props) => {
                                             </button>
                                             <button className="editPurchaseButton" 
                                                 onClick={() => {
-                                                        props.history.push(`/show/edit/${purchase.id}`)
+                                                        props.history.push(`/creditCardReport/edit/${purchase.id}`)
                                                 }}>
                                                 <EditIcon className={classes.primary} /> 
                                             </button>

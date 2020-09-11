@@ -41,13 +41,11 @@
   "creditCardReport": [
     {
       "id": 1,
-      "userId": 1,
-      "date": "12/15",
-      "storeName": "Parker",
+      "storeName": "Parkerdsgasffg",
       "city": "New York",
       "state": "NY",
       "price": 500,
-      "attachmentUrl": ""
+      "date": "12/15"
     },
     {
       "id": 2
