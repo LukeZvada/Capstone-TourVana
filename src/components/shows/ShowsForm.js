@@ -1,30 +1,37 @@
-import React, { useContext, useRef, useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { ShowContext } from "./ShowsProvider"
 import "./Shows.css"
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
 export const ShowForm = (props) => {
-    const { addShow, getShows, shows } = useContext(ShowContext)
+    const { addShow, getShows, shows, editShow } = useContext(ShowContext)
 
     const [show, setShow] = useState({})
+    console.log(show)
 
     const editMode = props.match.params.hasOwnProperty("showId")
 
-    const venueName = useRef(null)
-    const city = useRef(null)
-    const state = useRef(null)
-    const date = useRef(null)
+    // const venueName = useRef(null)
+    // const city = useRef(null)
+    // const state = useRef(null)
+    // const date = useRef(null)
 
+    const handleControlledInputChange = (event) => {
 
-
-   const getShowInEditMode = () => {
-    if (editMode) {
-        const showId = parseInt(props.match.params.showId)
-        const selectedShow = shows.find(show => show.id === showId) || {}
-        setShow(selectedShow)
+        const newShow = Object.assign({}, show)
+        newShow[event.target.name] = event.target.value
+        setShow(newShow)
     }
-}
+
+
+    const getShowInEditMode = () => {
+        if (editMode) {
+            const showId = parseInt(props.match.params.showId)
+            const selectedShow = shows.find(show => show.id === showId) || {}
+            setShow(selectedShow)
+        }
+    }
 
     useEffect(() => {
        getShows()
@@ -36,18 +43,30 @@ export const ShowForm = (props) => {
 
     const constructNewShow = () => {
 
-        if (venueName === 0) {
-            window.alert("Please type a venue")
+        if (show.id === 0) {
+            window.alert("Please select a location")
         } else {
-            addShow({
-                venueName: venueName.current.value,
-                city: city.current.value,
-                state: state.current.value,
-                date: date.current.value,
-                
-
-            })
-            .then(() => props.history.push("/show"))
+            if (editMode) {
+                // PUT
+                editShow({
+                    id: show.id,
+                    venueName: show.venueName,
+                    city: show.city,
+                    state: show.state,
+                    date: show.date
+                })
+                    .then(() => props.history.push("/show"))
+            } else {
+                // POST
+                addShow({
+                    name: show.venueName,
+                    venueName: show.venueName,
+                    city: show.city,
+                    state: show.state,
+                    date: show.date
+                })
+                    .then(() => props.history.push("/show"))
+            }
         }
     }
 
@@ -77,29 +96,45 @@ export const ShowForm = (props) => {
 
     return (
         <form className="showForm">
-            <h2 className="showForm__title">New Show</h2>
+            <h2 className="showForm__title">{editMode ? "Update Show" : "Add Show"}</h2>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="venueName"></label>
-                    <input type="text" id="venueName" ref={venueName} required autoFocus className="form-control" placeholder="Venue Name" />
+                    <input type="text" name="venueName" required autoFocus className="form-control"
+                        placeholder="Venue Name"
+                        defaultValue={show.venueName}
+                        onChange={handleControlledInputChange}
+                    />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="showCity"></label>
-                    <input type="text" id="showCity" ref={city} required autoFocus className="form-control" placeholder="City" />
+                    <label htmlFor="city"></label>
+                    <input type="text" name="city" required className="form-control"
+                        placeholder="City"
+                        defaultValue={show.city}
+                        onChange={handleControlledInputChange}
+                    />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="showState"></label>
-                    <input type="text" id="showState" ref={state} required autoFocus className="form-control" placeholder="State" />
+                    <label htmlFor="state"></label>
+                    <input type="text" name="state" required className="form-control"
+                        placeholder="State"
+                        defaultValue={show.state}
+                        onChange={handleControlledInputChange}
+                    />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="showDate"></label>
-                    <input type="text" id="showDate" ref={date} required autoFocus className="form-control" placeholder="Date" />
+                    <label htmlFor="date"></label>
+                    <input type="text" name="date" required className="form-control"
+                        placeholder="Date"
+                        defaultValue={show.date}
+                        onChange={handleControlledInputChange}
+                    />
                 </div>
             </fieldset>
             <section className={classes.buttonStyle}>
