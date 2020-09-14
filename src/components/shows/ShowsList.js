@@ -22,6 +22,8 @@ export const ShowList = (props) => {
         getUserShows()
     }, [])
 
+    console.log(userShows)
+
     // const onChange = () => { 
     //     setDate(date);
     // }
@@ -62,7 +64,7 @@ export const ShowList = (props) => {
 
             <article className="showsContainer">
                 {
-                    shows.map(show => {
+                    userShows.map(show => {
                             return <section key={show.id} className="shows">
                                         <div className="showDate">{show.date} </div>
                                         <div className="showLocation"> <h1 className="venueTitle"> {show.venueName} </h1> <h2 className="venueSubTitle">{show.city}, {show.state}</h2> </div> 

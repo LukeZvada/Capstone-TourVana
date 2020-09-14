@@ -17,20 +17,6 @@
   ],
   "show": [
     {
-      "id": 1,
-      "venueName": "Exit Inn",
-      "city": "Nashville",
-      "state": "TN",
-      "date": "3/20/2021"
-    },
-    {
-      "id": 2,
-      "venueName": "Buckhead Theater",
-      "city": "Atlanta",
-      "state": "GA",
-      "date": "3/21/2021"
-    },
-    {
       "venueName": "Music Farm",
       "city": "Charleston",
       "state": "SC",
@@ -75,7 +61,7 @@
       "city": "Cincinatti",
       "state": "OH",
       "date": "3/30/2021",
-      "userId": 1,
+      "userId": 2,
       "id": 8
     }
   ],

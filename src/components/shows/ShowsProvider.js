@@ -25,7 +25,7 @@ export const ShowProvider = (props) => {
     const getUserShows = () => {
         const currentUserId = localStorage.getItem("tourVana_username")
         const id = parseInt(currentUserId)
-        return fetch(`http://localhost:8088/show/${id}`)
+        return fetch(`http://localhost:8088/show?userId=${id}`)
             .then(res => res.json())
             .then(setUserShows)
     }
