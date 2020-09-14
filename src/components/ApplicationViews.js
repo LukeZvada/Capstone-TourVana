@@ -33,9 +33,11 @@ export const ApplicationViews = (props) => {
             </ShowProvider>
 
             <CCReportProvider>
-                <Route exact path="/creditCardReport" render={(props) => {
+                <UserProvider>
+                    <Route exact path="/creditCardReport" render={(props) => {
                         return <PurchaseList history={props.history} />
                     }} />
+                </UserProvider>
             </CCReportProvider>
 
             <CCReportProvider>

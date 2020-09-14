@@ -45,7 +45,8 @@ export const PurchaseForm = (props) => {
                     city: purchases.city,
                     state: purchases.state,
                     price: purchases.price,
-                    date: purchases.date
+                    date: purchases.date,
+                    userId: parseInt(localStorage.getItem("tourVana_username"))
                 })
                     .then(() => props.history.push("/creditCardReport"))
             } else {

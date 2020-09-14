@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { CreditCardReportContext } from './CreditCardProvider'
+import { UserContext } from "../users/UsersProvider"
 import "./creditCardReport.css"
 import { makeStyles } from '@material-ui/core/styles';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
@@ -9,10 +10,14 @@ import EditIcon from '@material-ui/icons/Edit';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
 export const PurchaseList = (props) => {
-    const { purchase, getPurchase, deletePurchase } = useContext(CreditCardReportContext)
+    const { purchase, getPurchase, deletePurchase, getUserPurchases, userPurchases } = useContext(CreditCardReportContext)
+    const { users, getUsers, getCurrentUser, currentUser } = useContext(UserContext)
+    const currentUserId = parseInt(localStorage.getItem("tourVana_username"))
 
     useEffect(() => {
         getPurchase()
+        getCurrentUser()
+        getUserPurchases(currentUserId)
     }, [])
 
     
@@ -52,7 +57,7 @@ export const PurchaseList = (props) => {
 
             <article className="purchaseContainer">
                 {
-                    purchase.map(purchase => {
+                    userPurchases.map(purchase => {
                             return <section key={purchase.id} className="purchases">
                                         <div className="purchaseDate">{purchase.date} </div>
                                         <div className="storeName"> <h1 className="storeTitle"> {purchase.storeName} </h1> <h2 className="storeSubTitle"> {purchase.city}, {purchase.state} </h2></div> 

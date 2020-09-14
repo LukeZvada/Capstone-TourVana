@@ -4,11 +4,18 @@ export const CreditCardReportContext = React.createContext()
 
 export const CCReportProvider = (props) => {
     const [purchase, setPurchase] = useState([])
+    const [userPurchases, setUserPurchases] = useState([])
 
     const getPurchase = () => {
         return fetch("http://localhost:8088/creditCardReport")
             .then(res => res.json())
             .then(setPurchase)
+    }
+
+    const getUserPurchases = (userId) => {
+        return fetch(`http://localhost:8088/creditCardReport?userId=${userId}`)
+            .then(res => res.json())
+            .then(setUserPurchases)
     }
 
     const addPurchase = purchase => {
@@ -42,7 +49,7 @@ export const CCReportProvider = (props) => {
 
     return (
         <CreditCardReportContext.Provider value={{
-            purchase, getPurchase, addPurchase, deletePurchase, editPurchase
+            purchase, getPurchase, addPurchase, deletePurchase, editPurchase, getUserPurchases, userPurchases
         }}>
             {props.children}
         </CreditCardReportContext.Provider>
