@@ -6,7 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const ShowForm = (props) => {
     const { addShow, getShows, shows, editShow } = useContext(ShowContext)
-
     const [show, setShow] = useState({})
 
     const editMode = props.match.params.hasOwnProperty("showId")
@@ -52,7 +51,8 @@ export const ShowForm = (props) => {
                     venueName: show.venueName,
                     city: show.city,
                     state: show.state,
-                    date: show.date
+                    date: show.date,
+                    userId: parseInt(localStorage.getItem("tourVana_username"))
                 })
                     .then(() => props.history.push("/show"))
             }

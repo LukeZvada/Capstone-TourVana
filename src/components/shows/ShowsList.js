@@ -1,6 +1,7 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { ShowContext } from "./ShowsProvider"
 import { UserContext } from "../users/UsersProvider"
+import Calendar from 'react-calendar'; 
 import "./Shows.css"
 import { makeStyles } from '@material-ui/core/styles';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
@@ -12,6 +13,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 export const ShowList = (props) => {
     const { shows, getShows, deleteShow } = useContext(ShowContext)
     const { users, getUsers } = useContext(UserContext)
+    const [ date, setDate ] = useState(new Date());
   
 
     useEffect(() => {
@@ -19,11 +21,15 @@ export const ShowList = (props) => {
         getUsers()
     }, [])
 
+    const onChange = () => { 
+        setDate(date);
+    }
+ 
     const useStyles = makeStyles((theme) => ({
         root: {
           '& > *': {
             margin: theme.spacing(1),
-            color: "#EB5757",
+            color: "#EB5757",  
             position: "fixed",
             display: "flex",
             bottom: 0,

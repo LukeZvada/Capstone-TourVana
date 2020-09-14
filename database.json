@@ -10,18 +10,67 @@
   ],
   "show": [
     {
-      "id": 1,
       "venueName": "Exit Inn",
       "city": "Nashville",
       "state": "TN",
-      "date": "12/20/20"
+      "date": "3/20/2021",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "venueName": "Buckhead Theater",
+      "city": "Atlanta",
+      "state": "GA",
+      "date": "3/21/2021",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "venueName": "Music Farm",
+      "city": "Charleston",
+      "state": "SC",
+      "date": "3/22/2021",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "venueName": "Irvine Plaza",
+      "city": "New York",
+      "state": "NY",
+      "date": "3/25/2021"
+    },
+    {
+      "venueName": "The Aura",
+      "city": "Portland",
+      "state": "ME",
+      "date": "3/26/2021",
+      "userId": 1,
+      "id": 5
     },
     {
       "venueName": "Grog Shop",
       "city": "Cleveland",
       "state": "OH",
-      "date": "12/21/2020",
-      "id": 2
+      "date": "3/28/2021",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "venueName": "Express Live",
+      "city": "Columbus ",
+      "state": "OH",
+      "date": "3/29/2021",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "venueName": "Bogarts",
+      "city": "Cincinatti",
+      "state": "OH",
+      "date": "3/30/2021",
+      "userId": 1,
+      "id": 8
     }
   ],
   "settlement": [
