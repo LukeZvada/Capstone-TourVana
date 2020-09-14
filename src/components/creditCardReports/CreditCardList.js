@@ -55,7 +55,7 @@ export const PurchaseList = (props) => {
                             return <section key={purchase.id} className="purchases">
                                         <div className="purchaseDate">{purchase.date} &curren; &nbsp; </div>
                                         <div className="storeName"> {purchase.storeName} {purchase.city}, {purchase.state}</div> 
-                                        <div className="showIcons"> 
+                                        <div className="expenseIcons"> 
                                         <div className="price">${purchase.price}</div> 
                                             <button className="deletePurchaseButton" variant="contained"
                                                 onClick={
