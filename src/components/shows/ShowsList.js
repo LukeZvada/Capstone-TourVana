@@ -33,7 +33,7 @@ export const ShowList = (props) => {
         },
         primary: {
           '& > *': {
-            color: "white"
+            color: "black"
           },
         },
 
@@ -63,23 +63,23 @@ export const ShowList = (props) => {
                 {
                     shows.map(show => {
                             return <section key={show.id} className="shows">
-                                        <div className="showDate">{show.date} &curren; &nbsp; </div>
-                                        <div className="showLocation"> {show.venueName} - {show.city}, {show.state} </div> 
+                                        <div className="showDate">{show.date} </div>
+                                        <div className="showLocation"> <h1 className="venueTitle"> {show.venueName} </h1> <h2 className="venueSubTitle">{show.city}, {show.state}</h2> </div> 
                                         <div className="showIcons"> 
                                             <button className="deleteShowButton" variant="contained"
                                                 onClick={
                                                     () => deleteShow(show.id).then(props.history.push("/show"))
                                                 }>
-                                                <DeleteIcon className={classes.primary} /> 
+                                                <DeleteIcon style={{ fontSize: 20 }} className={classes.primary} /> 
                                             </button>
                                             <button className="deleteShowButton" 
                                                 onClick={() => {
                                                         props.history.push(`/show/edit/${show.id}`)
                                                 }}>
-                                                <EditIcon className={classes.primary} /> 
+                                                <EditIcon style={{ fontSize: 20 }} className={classes.primary} /> 
                                             </button>
                                             <button className="deleteShowButton">
-                                                <AssignmentIcon className={classes.primary} /> 
+                                                <AssignmentIcon style={{ fontSize: 20 }} className={classes.primary} /> 
                                             </button>
                                         </div>
                                     </section>

@@ -17,11 +17,11 @@
       "date": "12-20-20"
     },
     {
-      "id": 2,
-      "venueName": "The Buckhead Theater",
-      "city": "Atlanta",
-      "state": "GA",
-      "date": "12/21/20"
+      "venueName": "Grog Shop",
+      "city": "Cleveland",
+      "state": "OH",
+      "date": "12/21/2020",
+      "id": 2
     }
   ],
   "settlement": [
