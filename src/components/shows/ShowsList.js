@@ -14,15 +14,15 @@ export const ShowList = (props) => {
     const { shows, getShows, userShows, getUserShows, deleteShow } = useContext(ShowContext)
     const { users, getUsers, getCurrentUser, currentUser } = useContext(UserContext)
     const [ date, setDate ] = useState(new Date());
+    const currentUserId = parseInt(localStorage.getItem("tourVana_username"))
 
     useEffect(() => {
         getShows()
         getUsers()
         getCurrentUser()
-        getUserShows()
+        getUserShows(currentUserId)
     }, [])
 
-    console.log(userShows)
 
     // const onChange = () => { 
     //     setDate(date);
