@@ -33,8 +33,6 @@ export const PurchaseList = (props) => {
           '& > *': {
             color: "black",
             fontSize: "18px",
-            border: "white",
-            background: "white"
           },
         },
 
@@ -59,22 +57,22 @@ export const PurchaseList = (props) => {
                                         <div className="purchaseDate">{purchase.date} </div>
                                         <div className="storeName"> <h1 className="storeTitle"> {purchase.storeName} </h1> <h2 className="storeSubTitle"> {purchase.city}, {purchase.state} </h2></div> 
                                         <div className="expenseIcons"> 
-                                        <div className="price">${purchase.price}</div> 
+                                        <div className="price">-${purchase.price}</div> 
                                             <div className="buttonColumn">
 
-                                                <button className="deletePurchaseButton" variant="contained"
+                                                <button className="iconBackgroundStyling" variant="contained"
                                                     onClick={
                                                         () => deletePurchase(purchase.id).then(props.history.push("/creditCardReport"))
                                                     }>
                                                     <DeleteIcon style={{ fontSize: 14 }} className={classes.primary} /> 
                                                 </button>
-                                                <button className="editPurchaseButton" 
+                                                <button className="iconBackgroundStyling" 
                                                     onClick={() => {
                                                         props.history.push(`/creditCardReport/edit/${purchase.id}`)
                                                     }}>
                                                     <EditIcon style={{ fontSize: 14 }} className={classes.primary} /> 
                                                 </button>
-                                                <button className="viewPurchaseButton">
+                                                <button className="iconBackgroundStyling">
                                                     <AssignmentIcon style={{ fontSize: 14 }} className={classes.primary} /> 
                                                 </button>
                                             </div>
