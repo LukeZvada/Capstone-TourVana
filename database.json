@@ -25,14 +25,6 @@
       "id": 3
     },
     {
-      "id": 4,
-      "venueName": "Irvine Plaza",
-      "city": "New York",
-      "state": "NY",
-      "userId": 2,
-      "date": "3/25/2021"
-    },
-    {
       "venueName": "The Aura",
       "city": "Portland",
       "state": "ME",
@@ -63,6 +55,14 @@
       "date": "3/30/2021",
       "userId": 2,
       "id": 8
+    },
+    {
+      "id": 9,
+      "venueName": "Irvine Plaza",
+      "city": "New York",
+      "state": "OH",
+      "date": "3/20/2021",
+      "userId": "2"
     }
   ],
   "settlement": [

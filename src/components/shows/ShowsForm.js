@@ -44,7 +44,8 @@ export const ShowForm = (props) => {
                     venueName: show.venueName,
                     city: show.city,
                     state: show.state,
-                    date: show.date
+                    date: show.date,
+                    userId: localStorage.getItem("tourVana_username")
                 })
                     .then(() => props.history.push("/show"))
             } else {
@@ -52,7 +53,8 @@ export const ShowForm = (props) => {
                     venueName: show.venueName,
                     city: show.city,
                     state: show.state,
-                    date: show.date
+                    date: show.date,
+                    userId: localStorage.getItem("tourVana_username")
                 })
                     .then(() => props.history.push("/show"))
             }
