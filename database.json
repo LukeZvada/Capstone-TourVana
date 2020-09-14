@@ -40,27 +40,36 @@
   ],
   "creditCardReport": [
     {
+      "id": 1,
+      "storeName": "Parker Hotel",
+      "city": "New York",
+      "state": "NY",
+      "price": "546.67",
+      "date": "12/18/2020"
+    },
+    {
       "storeName": "Kroger",
       "city": "Nashville",
       "state": "TN",
-      "price": "40",
-      "date": "12/20/20",
-      "id": 1
-    },
-    {
+      "price": "254.23",
+      "date": "12/21/20",
       "id": 2
     },
     {
+      "storeName": "Sinkers",
+      "city": "Nashville",
+      "state": "TN",
+      "price": "154.23",
+      "date": "12/21/2020",
       "id": 3
     },
     {
+      "storeName": "Southwest",
+      "city": "Dallas",
+      "state": "TX ",
+      "price": "540.32",
+      "date": "12/21/2020",
       "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
     }
   ]
 }

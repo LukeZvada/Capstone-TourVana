@@ -64,16 +64,16 @@ export const PurchaseList = (props) => {
                                                     onClick={
                                                         () => deletePurchase(purchase.id).then(props.history.push("/creditCardReport"))
                                                     }>
-                                                    <DeleteIcon style={{ fontSize: 14 }} className={classes.primary} /> 
+                                                    <DeleteIcon style={{ fontSize: 16 }} className={classes.primary} /> 
                                                 </button>
                                                 <button className="iconBackgroundStyling" 
                                                     onClick={() => {
                                                         props.history.push(`/creditCardReport/edit/${purchase.id}`)
                                                     }}>
-                                                    <EditIcon style={{ fontSize: 14 }} className={classes.primary} /> 
+                                                    <EditIcon style={{ fontSize: 16 }} className={classes.primary} /> 
                                                 </button>
                                                 <button className="iconBackgroundStyling">
-                                                    <AssignmentIcon style={{ fontSize: 14 }} className={classes.primary} /> 
+                                                    <AssignmentIcon style={{ fontSize: 16 }} className={classes.primary} /> 
                                                 </button>
                                             </div>
                                         </div>

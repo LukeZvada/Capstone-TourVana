@@ -39,7 +39,8 @@
 .purchaseDate { 
     display: flex;
     align-items: center;
-    margin-left: -1rem;
+    margin-left: -2rem;
+    width: 5rem;
 }
 
 .price { 
@@ -53,6 +54,7 @@
     font-size: 20px;
     font-weight: bold;
     margin: 0;
+    flex-wrap: nowrap;
 }
 
 .storeSubTitle { 
@@ -64,7 +66,7 @@
 .storeName { 
     display: flex;
     flex-direction: column;
-    width: 7rem;
+    width: 10rem;
     flex-wrap: wrap;
     align-items: center;
 }
