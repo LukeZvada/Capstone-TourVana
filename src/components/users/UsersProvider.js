@@ -1,7 +1,5 @@
 import React, { useState } from "react"
 
-const currentUserId = localStorage.getItem("tourVana_username")
-
 export const UserContext = React.createContext()
 
 
@@ -16,6 +14,7 @@ export const UserProvider = (props) => {
     }
 
     const getCurrentUser = () => {
+        const currentUserId = localStorage.getItem("tourVana_username")
         const id = parseInt(currentUserId)
         return fetch(`http://localhost:8088/users/${id}`)
         .then(res => res.json())

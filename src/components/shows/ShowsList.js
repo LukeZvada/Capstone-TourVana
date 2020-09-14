@@ -19,6 +19,7 @@ export const ShowList = (props) => {
         getShows()
         getUsers()
         getCurrentUser()
+        getUserShows()
     }, [])
 
     // const onChange = () => { 

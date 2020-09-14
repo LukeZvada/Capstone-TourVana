@@ -22,9 +22,10 @@ export const ShowProvider = (props) => {
     // create a getCurrentUserShows function
     // in that function, call getShows()
     // then map through all those shows and only return the shows that have a userId that matches the currentUser.id
-    const getUserShows = user => {
-        console.log("user shows current user", user)
-        return fetch(`http://localhost:8088/show?userId=${user.id}`)
+    const getUserShows = () => {
+        const currentUserId = localStorage.getItem("tourVana_username")
+        const id = parseInt(currentUserId)
+        return fetch(`http://localhost:8088/show/${id}`)
             .then(res => res.json())
             .then(setUserShows)
     }
