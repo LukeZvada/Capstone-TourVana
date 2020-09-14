@@ -90,3 +90,10 @@
         background-color: white;
         margin-top: .4rem;
 }
+.purchaseForm { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+
+}
