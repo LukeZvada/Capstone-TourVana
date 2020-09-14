@@ -1,11 +1,13 @@
 .welcomeTitle { 
     display: flex;
     justify-content: center;
+    letter-spacing: 8px;
 }
 
 .upcomingShows { 
     display: flex;
     justify-content: center;
+    letter-spacing: 6px;
 }
 
 .addShowButton {

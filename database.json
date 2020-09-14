@@ -48,12 +48,12 @@
       "date": "12/18/2020"
     },
     {
+      "id": 2,
       "storeName": "Kroger",
       "city": "Nashville",
       "state": "TN",
       "price": "254.23",
-      "date": "12/21/20",
-      "id": 2
+      "date": "12/21/2020"
     },
     {
       "storeName": "Sinkers",
