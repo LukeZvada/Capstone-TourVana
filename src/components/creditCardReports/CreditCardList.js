@@ -31,8 +31,10 @@ export const PurchaseList = (props) => {
         },
         primary: {
           '& > *': {
-            color: "red",
+            color: "black",
             fontSize: "18px",
+            border: "white",
+            background: "white"
           },
         },
 
@@ -54,7 +56,7 @@ export const PurchaseList = (props) => {
                 {
                     purchase.map(purchase => {
                             return <section key={purchase.id} className="purchases">
-                                        <div className="purchaseDate">{purchase.date} &curren; &nbsp; </div>
+                                        <div className="purchaseDate">{purchase.date} </div>
                                         <div className="storeName"> <h1 className="storeTitle"> {purchase.storeName} </h1> <h2 className="storeSubTitle"> {purchase.city}, {purchase.state} </h2></div> 
                                         <div className="expenseIcons"> 
                                         <div className="price">${purchase.price}</div> 
@@ -64,16 +66,16 @@ export const PurchaseList = (props) => {
                                                     onClick={
                                                         () => deletePurchase(purchase.id).then(props.history.push("/creditCardReport"))
                                                     }>
-                                                    <DeleteIcon className={classes.primary} /> 
+                                                    <DeleteIcon style={{ fontSize: 16 }} className={classes.primary} /> 
                                                 </button>
                                                 <button className="editPurchaseButton" 
                                                     onClick={() => {
                                                         props.history.push(`/creditCardReport/edit/${purchase.id}`)
                                                     }}>
-                                                    <EditIcon className={classes.primary} /> 
+                                                    <EditIcon style={{ fontSize: 16 }} className={classes.primary} /> 
                                                 </button>
                                                 <button className="viewPurchaseButton">
-                                                    <AssignmentIcon className={classes.primary} /> 
+                                                    <AssignmentIcon style={{ fontSize: 16 }} className={classes.primary} /> 
                                                 </button>
                                             </div>
                                         </div>
