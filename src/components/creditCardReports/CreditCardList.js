@@ -54,11 +54,9 @@ export const PurchaseList = (props) => {
                     purchase.map(purchase => {
                             return <section key={purchase.id} className="purchases">
                                         <div className="purchaseDate">{purchase.date} &curren; &nbsp; </div>
-                                        <div className="storeName"> {purchase.storeName}</div> 
-                                        <div className="storeCity"> {purchase.city}</div> 
-                                        <div className="storeState"> {purchase.state}</div> 
-                                        <div className="price"> {purchase.price}</div> 
+                                        <div className="storeName"> {purchase.storeName} {purchase.city}, {purchase.state}</div> 
                                         <div className="showIcons"> 
+                                        <div className="price">${purchase.price}</div> 
                                             <button className="deletePurchaseButton" variant="contained"
                                                 onClick={
                                                     () => deletePurchase(purchase.id).then(props.history.push("/creditCardReport"))
