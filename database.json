@@ -6,6 +6,13 @@
       "lastName": "Zvada",
       "username": "lzvada",
       "password": "123"
+    },
+    {
+      "id": 2,
+      "firstName": "John",
+      "lastName": "Smith",
+      "username": "jsmith",
+      "password": "123"
     }
   ],
   "show": [
@@ -14,7 +21,7 @@
       "city": "Nashville",
       "state": "TN",
       "date": "3/20/2021",
-      "userId": 1,
+      "userId": 2,
       "id": 1
     },
     {
@@ -38,6 +45,7 @@
       "venueName": "Irvine Plaza",
       "city": "New York",
       "state": "NY",
+      "userId": 2,
       "date": "3/25/2021"
     },
     {
@@ -89,35 +97,39 @@
   ],
   "creditCardReport": [
     {
-      "id": 1,
       "storeName": "Parker Hotel",
       "city": "New York",
       "state": "NY",
-      "price": "546.67",
-      "date": "12/18/2020"
+      "price": "534.98",
+      "date": "3/21/2021",
+      "userId": 1,
+      "id": 1
     },
     {
-      "id": 2,
       "storeName": "Kroger",
       "city": "Nashville",
       "state": "TN",
-      "price": "254.23",
-      "date": "12/21/2020"
+      "price": "234.43",
+      "date": "3/22/2021",
+      "userId": 1,
+      "id": 2
     },
     {
       "storeName": "Sinkers",
       "city": "Nashville",
       "state": "TN",
-      "price": "154.23",
-      "date": "12/21/2020",
+      "price": "165.54",
+      "date": "3/23/2021",
+      "userId": 1,
       "id": 3
     },
     {
-      "storeName": "Southwest",
-      "city": "Dallas",
-      "state": "TX ",
-      "price": "540.32",
-      "date": "12/21/2020",
+      "storeName": "Pilot",
+      "city": "Columbus",
+      "state": "OH",
+      "price": "432.21",
+      "date": "3/26/2021",
+      "userId": 1,
       "id": 4
     }
   ]

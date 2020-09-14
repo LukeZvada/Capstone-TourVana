@@ -11,19 +11,19 @@ import EditIcon from '@material-ui/icons/Edit';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
 export const ShowList = (props) => {
-    const { shows, getShows, deleteShow } = useContext(ShowContext)
-    const { users, getUsers } = useContext(UserContext)
+    const { shows, getShows, userShows, getUserShows, deleteShow } = useContext(ShowContext)
+    const { users, getUsers, getCurrentUser, currentUser } = useContext(UserContext)
     const [ date, setDate ] = useState(new Date());
-  
 
     useEffect(() => {
         getShows()
         getUsers()
+        getCurrentUser()
     }, [])
 
-    const onChange = () => { 
-        setDate(date);
-    }
+    // const onChange = () => { 
+    //     setDate(date);
+    // }
  
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -50,15 +50,9 @@ export const ShowList = (props) => {
     return (
         <>
             <article className="welcomeMessage">
-                {
-                    users.map(user => {
-                        const currentUser = users.find(currentUser => currentUser.id === user.id) || {}
-                            return <section key={user.id} className="user">
-                            <div><h1 className="welcomeTitle">Welcome, {currentUser.firstName}</h1></div>
-                            </section>
-                    
-                    })
-                }
+                <section key={currentUser.id} className="user">
+                    <div><h1 className="welcomeTitle">Welcome, {currentUser.firstName}</h1></div>
+                </section>
             </article>
             
             <article>

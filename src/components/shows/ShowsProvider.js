@@ -11,11 +11,22 @@ export const ShowContext = React.createContext()
  */
 export const ShowProvider = (props) => {
     const [shows, setShows] = useState([])
+    const [userShows, setUserShows] = useState([])
 
     const getShows = () => {
         return fetch("http://localhost:8088/show")
             .then(res => res.json())
             .then(setShows)
+    }
+
+    // create a getCurrentUserShows function
+    // in that function, call getShows()
+    // then map through all those shows and only return the shows that have a userId that matches the currentUser.id
+    const getUserShows = user => {
+        console.log("user shows current user", user)
+        return fetch(`http://localhost:8088/show?userId=${user.id}`)
+            .then(res => res.json())
+            .then(setUserShows)
     }
 
     const addShow = show => {
@@ -54,7 +65,7 @@ export const ShowProvider = (props) => {
     */
     return (
         <ShowContext.Provider value={{
-            shows, addShow, getShows, deleteShow, editShow
+            shows, addShow, getShows, deleteShow, editShow, getUserShows, userShows
         }}>
             {props.children}
         </ShowContext.Provider>
