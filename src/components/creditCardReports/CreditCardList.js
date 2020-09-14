@@ -31,7 +31,8 @@ export const PurchaseList = (props) => {
         },
         primary: {
           '& > *': {
-            color: "white"
+            color: "red",
+            fontSize: "18px",
           },
         },
 
@@ -54,24 +55,27 @@ export const PurchaseList = (props) => {
                     purchase.map(purchase => {
                             return <section key={purchase.id} className="purchases">
                                         <div className="purchaseDate">{purchase.date} &curren; &nbsp; </div>
-                                        <div className="storeName"> {purchase.storeName} {purchase.city}, {purchase.state}</div> 
+                                        <div className="storeName"> <h1 className="storeTitle"> {purchase.storeName} </h1> <h2 className="storeSubTitle"> {purchase.city}, {purchase.state} </h2></div> 
                                         <div className="expenseIcons"> 
                                         <div className="price">${purchase.price}</div> 
-                                            <button className="deletePurchaseButton" variant="contained"
-                                                onClick={
-                                                    () => deletePurchase(purchase.id).then(props.history.push("/creditCardReport"))
-                                                }>
-                                                <DeleteIcon className={classes.primary} /> 
-                                            </button>
-                                            <button className="editPurchaseButton" 
-                                                onClick={() => {
+                                            <div className="buttonColumn">
+
+                                                <button className="deletePurchaseButton" variant="contained"
+                                                    onClick={
+                                                        () => deletePurchase(purchase.id).then(props.history.push("/creditCardReport"))
+                                                    }>
+                                                    <DeleteIcon className={classes.primary} /> 
+                                                </button>
+                                                <button className="editPurchaseButton" 
+                                                    onClick={() => {
                                                         props.history.push(`/creditCardReport/edit/${purchase.id}`)
-                                                }}>
-                                                <EditIcon className={classes.primary} /> 
-                                            </button>
-                                            <button className="viewPurchaseButton">
-                                                <AssignmentIcon className={classes.primary} /> 
-                                            </button>
+                                                    }}>
+                                                    <EditIcon className={classes.primary} /> 
+                                                </button>
+                                                <button className="viewPurchaseButton">
+                                                    <AssignmentIcon className={classes.primary} /> 
+                                                </button>
+                                            </div>
                                         </div>
                                     </section>
                             

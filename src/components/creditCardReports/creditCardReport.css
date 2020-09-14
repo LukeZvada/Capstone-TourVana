@@ -24,6 +24,7 @@
 .purchases { 
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     background-color: white;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -35,15 +36,44 @@
     box-shadow: 0px 6px 10px 2px rgba(163, 163,163,1);
 }
 
+.purchaseDate { 
+    display: flex;
+    align-items: center;
+    margin-left: -1rem;
+}
+
+.storeTitle { 
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.storeSubTitle { 
+    font-size: 15px;
+    color: grey;
+    margin: 0;
+}
+
 .storeName { 
     display: flex;
     flex-direction: column;
     width: 7rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .expenseIcons {
     display: flex;
+    width: 7rem;
     flex-direction: column;
     align-items: flex-end;
+}
+
+.buttonColumn { 
+    display: flex;
+    flex-direction: row;
+}
+
+.deletePurchaseButton { 
+    font-size: 18px;
 }
