@@ -59,7 +59,7 @@ export const SettlementList = (props) => {
                                                 <AddCircleOutlineIcon style={{ fontSize: 20 }} />
                                             </button>
                                             <button className="deleteShowButton">
-                                                <AssignmentIcon style={{ fontSize: 20 }} className={classes.primary} onClick={() => props.history.push("/settlement/settlementReport")}/> 
+                                                <AssignmentIcon style={{ fontSize: 20 }} className={classes.primary} onClick={() => props.history.push(`/settlement/view/${show.id}`)}/> 
                                             </button>
                                         </div>
                                     </section>

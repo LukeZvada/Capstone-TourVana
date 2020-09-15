@@ -19,7 +19,7 @@ export const SettlementImageProvider = (props) => {
     }
 
     const getUploadedImages = () => {
-        return fetch("https://api.cloudinary.com/v1_1/zvada/image/upload")
+        return fetch("http://localhost:8088/settlement")
             .then(res => res.json())
             .then(setUploadedImages)
     }

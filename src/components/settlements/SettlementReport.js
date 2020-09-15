@@ -1,31 +1,28 @@
 import React, { useState, useContext, useEffect } from "react"
 import { SettlementImageContext } from "./SettlementsProvider"
-import { ShowContext } from "../shows/ShowsProvider"
+
 
 
 
 export const SettlementReport = (props) => {
-    const { uploadedImages, setUploadedImages } = useContext(SettlementImageContext)
-    const [ showImage, setShowImage ] = useState({})
-    const { addShow, getShows, shows, editShow } = useContext(ShowContext)
-    const [show, setShow] = useState({})
+    const { uploadedImages, getUploadedImages } = useContext(SettlementImageContext)
 
-    const imageMode = props.match.params.hasOwnProperty("showId")
-
-    const getShowInImageMode = () => {
-        if (imageMode) {
-            const showId = parseInt(props.match.params.showId)
-            const selectedShow = show.find(show => show.id === showId) || {}
-            setShow(selectedShow)
-        }
-    }
 
     useEffect(() => {
-        getShows()
+        getUploadedImages()
      }, [])
- 
-     useEffect(() => {
-         getShowInImageMode()
-     }, [shows])
 
+     return (
+         <>
+         <h2>Settlement Image</h2>
+
+            {
+                uploadedImages.map(image => {
+                    return <section key={image.id} className="settlementImage">
+                               <img src={image.attachmentUrl} />
+                            </section>
+                })
+            }
+         </>
+     )
 }

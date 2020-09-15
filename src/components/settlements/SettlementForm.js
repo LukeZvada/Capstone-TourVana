@@ -40,7 +40,7 @@ export const SettlementImageUpload = (props) => {
         const constructNewSettlementImage = () => {
             console.log(settlementShowId)
             addSettlementImage({
-                attachementUrl: image,
+                attachmentUrl: image,
                 showId: settlementShowId
             })
             .then(() => props.history.push("/settlement"))

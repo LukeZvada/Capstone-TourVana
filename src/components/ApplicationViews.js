@@ -50,6 +50,10 @@ export const ApplicationViews = (props) => {
                         return <SettlementImageUpload {...props}/>
                     }}>
                     </Route>
+                    <Route path="/settlement/view/:showId(\d+)" render ={(props) => {
+                        return <SettlementReport {...props}/>
+                    }}>
+                    </Route>
                 </SettlementImageProvider>
             </ShowProvider>
 
