@@ -55,17 +55,8 @@ export const SettlementList = (props) => {
                                         <div className="showDate">{show.date} </div>
                                         <div className="showLocation"> <h1 className="venueTitle"> {show.venueName} </h1> <h2 className="venueSubTitle">{show.city}, {show.state}</h2> </div> 
                                         <div className="showIcons"> 
-                                            <button className="deleteShowButton" variant="contained"
-                                                onClick={
-                                                    () => deleteShow(show.id).then(props.history.push("/show"))
-                                                }>
-                                                <DeleteIcon style={{ fontSize: 20 }} className={classes.primary} /> 
-                                            </button>
-                                            <button className="deleteShowButton" 
-                                                onClick={() => {
-                                                        props.history.push(`/show/edit/${show.id}`)
-                                                }}>
-                                                <EditIcon style={{ fontSize: 20 }} className={classes.primary} /> 
+                                            <button className="deleteShowButton" onClick={() => props.history.push("/settlement/create")}>
+                                                <AddCircleOutlineIcon style={{ fontSize: 20 }} />
                                             </button>
                                             <button className="deleteShowButton">
                                                 <AssignmentIcon style={{ fontSize: 20 }} className={classes.primary} /> 
@@ -76,11 +67,11 @@ export const SettlementList = (props) => {
                     })
                 }
             </article>
-            <section className={classes.root}>
+            {/* <section className={classes.root}>
                 <Button className="addShowButton" onClick={() => props.history.push("/settlement/create")}>
                     <AddCircleOutlineIcon style={{ fontSize: 30 }} />
                 </Button>
-            </section>
+            </section> */}
         </>
     )
 
