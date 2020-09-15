@@ -9,6 +9,8 @@ import { PurchaseList } from "./creditCardReports/CreditCardList"
 import { PurchaseForm } from "./creditCardReports/CreditCardForm"
 import { SettlementList } from "./settlements/SettlementList"
 import { SettlementImageUpload } from "./settlements/SettlementForm"
+import { SettlementImageProvider } from "./settlements/SettlementsProvider"
+import { SettlementReport } from "./settlements/SettlementReport"
 
 
 
@@ -43,10 +45,12 @@ export const ApplicationViews = (props) => {
             </ShowProvider>
 
             <ShowProvider>
-                <Route path="/settlement/create" render ={(props) => {
+                <SettlementImageProvider>
+                    <Route path="/settlement/create/:showId(\d+)" render ={(props) => {
                         return <SettlementImageUpload {...props}/>
                     }}>
-                </Route>
+                    </Route>
+                </SettlementImageProvider>
             </ShowProvider>
 
             <CCReportProvider>
