@@ -7,6 +7,8 @@ import { UserProvider } from "./users/UsersProvider"
 import { CCReportProvider } from "./creditCardReports/CreditCardProvider"
 import { PurchaseList } from "./creditCardReports/CreditCardList"
 import { PurchaseForm } from "./creditCardReports/CreditCardForm"
+import { SettlementList } from "./settlements/SettlementList"
+import { SettlementImageUpload } from "./settlements/SettlementForm"
 
 
 
@@ -28,6 +30,21 @@ export const ApplicationViews = (props) => {
                 </Route>
                 <Route path="/show/edit/:showId(\d+)" render ={(props) => {
                         return <ShowForm {...props}/>
+                    }}>
+                </Route>
+            </ShowProvider>
+
+            <ShowProvider>
+                <UserProvider>
+                    <Route exact path="/settlement" render={(props) => {
+                        return <SettlementList history={props.history} />
+                    }} />
+                </UserProvider>
+            </ShowProvider>
+
+            <ShowProvider>
+                <Route path="/settlement/create" render ={(props) => {
+                        return <SettlementImageUpload {...props}/>
                     }}>
                 </Route>
             </ShowProvider>

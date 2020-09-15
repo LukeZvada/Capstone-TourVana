@@ -89,7 +89,7 @@ export const PurchaseList = (props) => {
             </article>
             <section className={classes.root}>
                 <Button className="addPurchaseButton" onClick={() => props.history.push("/creditCardReport/create")}>
-                    <AddCircleOutlineIcon />
+                    <AddCircleOutlineIcon style={{ fontSize: 30 }} />
                 </Button>
             </section>
         </>
