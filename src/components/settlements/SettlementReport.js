@@ -1,28 +1,20 @@
 import React, { useState, useContext, useEffect } from "react"
 import { SettlementImageContext } from "./SettlementsProvider"
 
-
-
-
 export const SettlementReport = (props) => {
-    const { uploadedImages, getUploadedImages } = useContext(SettlementImageContext)
-
-
+    const { settlement, getSettlement } = useContext(SettlementImageContext)
+    const currentSettlementId = props.match.params.settlementId
+    
     useEffect(() => {
-        getUploadedImages()
-     }, [])
+        getSettlement(currentSettlementId)
+    }, [])
 
-     return (
-         <>
-         <h2>Settlement Image</h2>
-
-            {
-                uploadedImages.map(image => {
-                    return <section key={image.id} className="settlementImage">
-                               <img src={image.attachmentUrl} />
-                            </section>
-                })
-            }
-         </>
-     )
+    return (
+        <>
+            <h2>Settlement Image</h2>
+            <section key={settlement.id} className="settlementImage">
+                <img src={settlement.attachmentUrl} />
+            </section>
+        </>
+    )
 }

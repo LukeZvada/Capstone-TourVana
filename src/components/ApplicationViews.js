@@ -38,23 +38,27 @@ export const ApplicationViews = (props) => {
 
             <ShowProvider>
                 <UserProvider>
-                    <Route exact path="/settlement" render={(props) => {
-                        return <SettlementList history={props.history} />
-                    }} />
+                    <SettlementImageProvider>
+                        <Route exact path="/settlement" render={(props) => {
+                            return <SettlementList history={props.history} />
+                        }} />
+                    </SettlementImageProvider>
                 </UserProvider>
             </ShowProvider>
 
             <ShowProvider>
-                <SettlementImageProvider>
-                    <Route path="/settlement/create/:showId(\d+)" render ={(props) => {
-                        return <SettlementImageUpload {...props}/>
-                    }}>
-                    </Route>
-                    <Route path="/settlement/view/:showId(\d+)" render ={(props) => {
-                        return <SettlementReport {...props}/>
-                    }}>
-                    </Route>
-                </SettlementImageProvider>
+                <UserProvider>
+                    <SettlementImageProvider>
+                        <Route path="/settlement/create/:showId(\d+)" render ={(props) => {
+                            return <SettlementImageUpload {...props}/>
+                        }}>
+                        </Route>
+                        <Route path="/settlement/:settlementId(\d+)" render ={(props) => {
+                            return <SettlementReport {...props}/>
+                        }}>
+                        </Route>
+                    </SettlementImageProvider>
+                </UserProvider>
             </ShowProvider>
 
             <CCReportProvider>

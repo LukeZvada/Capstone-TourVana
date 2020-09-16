@@ -36,6 +36,7 @@ export const ShowForm = (props) => {
         getShowInEditMode()
     }, [shows])
 
+
     const constructNewShow = () => {
 
             if (editMode) {
@@ -58,8 +59,7 @@ export const ShowForm = (props) => {
                 })
                     .then(() => props.history.push("/show"))
             }
-        }
-
+    }
 
     const useStyles = makeStyles((theme) => ({
         root: {

@@ -1,10 +1,12 @@
 import React, { useState } from "react"
+import { ShowContext } from "../shows/ShowsProvider"
 
 export const SettlementImageContext = React.createContext()
 
 
 export const SettlementImageProvider = (props) => {
-    const [uploadedImages, setUploadedImages] = useState([])
+    const [settlements, setSettlements] = useState([])
+    const [settlement, setSettlement] = useState([])
 
     // create an addSettlement method
     const addSettlementImage = image => {
@@ -15,18 +17,23 @@ export const SettlementImageProvider = (props) => {
             },
             body: JSON.stringify(image)
         })
-            .then(getUploadedImages)
     }
 
-    const getUploadedImages = () => {
-        return fetch("http://localhost:8088/settlement")
+    const getSettlements = () => {
+        return fetch(`http://localhost:8088/settlement`)
             .then(res => res.json())
-            .then(setUploadedImages)
+            .then(setSettlements)
+    }
+
+    const getSettlement = (settlement) => {
+        return fetch(`http://localhost:8088/settlement/${settlement}`)
+            .then(res => res.json())
+            .then(setSettlement)
     }
 
     return (
         <SettlementImageContext.Provider value={{
-            uploadedImages, setUploadedImages, getUploadedImages, 
+            getSettlements, settlements, getSettlement, settlement,
             addSettlementImage
         }}>
             {props.children}

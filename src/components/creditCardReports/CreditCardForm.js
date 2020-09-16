@@ -6,7 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const PurchaseForm = (props) => {
     const { addPurchase, getPurchase, purchase, editPurchase } = useContext(CreditCardReportContext)
-
+    const [image, setImage] = useState('')
+    const [loading, setLoading] = useState(false)
     const [purchases, setPurchase] = useState({})
 
     const editMode = props.match.params.hasOwnProperty("purchaseId")
@@ -36,6 +37,24 @@ export const PurchaseForm = (props) => {
         getPurchaseInEditMode()
     }, [purchase])
 
+    const uploadImage = async e => {
+        const files = e.target.files
+        const data = new FormData()
+        data.append('file', files[0])
+        data.append('upload_preset', 'lzvada')
+        setLoading(true)
+        const res = await fetch('https://api.cloudinary.com/v1_1/zvada/image/upload',
+            {
+            method: 'POST',
+            body: data
+            }
+        )
+        const file = await res.json()
+
+        setImage(file.secure_url)
+        setLoading(false)
+    }
+
     const constructNewPurchase = () => {
 
             if (editMode) {
@@ -46,7 +65,8 @@ export const PurchaseForm = (props) => {
                     state: purchases.state,
                     price: purchases.price,
                     date: purchases.date,
-                    userId: parseInt(localStorage.getItem("tourVana_username"))
+                    userId: parseInt(localStorage.getItem("tourVana_username")),
+                    attachementUrl: image
                 })
                     .then(() => props.history.push("/creditCardReport"))
             } else {
@@ -56,7 +76,8 @@ export const PurchaseForm = (props) => {
                     state: purchases.state,
                     price: purchases.price,
                     date: purchases.date,
-                    userId: parseInt(localStorage.getItem("tourVana_username"))
+                    userId: parseInt(localStorage.getItem("tourVana_username")),
+                    attachementUrl: image
                 })
                     .then(() => props.history.push("/creditCardReport"))
             }
@@ -140,6 +161,15 @@ export const PurchaseForm = (props) => {
                     />
                 </div>
             </fieldset>
+            <section className="Upload">
+                    <input className="uploadImage" type="file" name="file" placeholder="Upload an image"
+                    onChange={uploadImage}
+                    />
+                    {
+                        loading ? (<h3>It's getting it ...</h3>) 
+                        : (<img src={image} style={{ width: '300px' }} />)
+                    }
+            </section>
             <section className={classes.buttonStyle}>
                 <Button className="savePurchaseButton" variant="contained" type="submit"
                     onClick={evt => {
