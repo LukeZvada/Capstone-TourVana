@@ -17,52 +17,31 @@
   ],
   "show": [
     {
-      "venueName": "Music Farm",
-      "city": "Charleston",
-      "state": "SC",
-      "date": "3/22/2021",
+      "id": 1,
+      "venueName": "Exit Inntretrg",
+      "city": "Nashville",
+      "state": "TN",
+      "date": "12/20/20",
       "userId": 1,
-      "id": 3
+      "dealMemoUrl": ""
     },
     {
-      "venueName": "The Aura",
-      "city": "Portland",
-      "state": "ME",
-      "date": "3/26/2021",
+      "venueName": "Exit Inn",
+      "city": "Nashville",
+      "state": "TN",
+      "date": "12/20/20",
       "userId": 1,
-      "id": 5
+      "dealMemoUrl": "",
+      "id": 2
     },
     {
-      "venueName": "Grog Shop",
-      "city": "Cleveland",
-      "state": "OH",
-      "date": "3/28/2021",
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "venueName": "Express Live",
-      "city": "Columbus ",
-      "state": "OH",
-      "date": "3/29/2021",
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "venueName": "Bogarts",
-      "city": "Cincinatti",
-      "state": "OH",
-      "date": "3/30/2021",
-      "userId": 2,
-      "id": 8
-    },
-    {
-      "id": 9,
       "venueName": "Irvine Plaza",
       "city": "New York",
-      "state": "OH",
-      "date": "3/20/2021",
-      "userId": "2"
+      "state": "NY",
+      "date": "12/20/20",
+      "userId": 2,
+      "dealMemoUrl": "",
+      "id": 3
     }
   ],
   "settlement": [
@@ -85,6 +64,11 @@
       "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1600264729/lzvada/l5t3xp0myfodx0zmoz8z.png",
       "showId": 6,
       "id": 4
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1600271076/lzvada/gifenydwlieqpmumazwj.png",
+      "showId": 1,
+      "id": 5
     }
   ],
   "dealMemo": [
@@ -96,24 +80,6 @@
   ],
   "creditCardReport": [
     {
-      "storeName": "Parker Hotel",
-      "city": "New York",
-      "state": "NY",
-      "price": "534.98",
-      "date": "3/21/2021",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "storeName": "Kroger",
-      "city": "Nashville",
-      "state": "TN",
-      "price": "234.43",
-      "date": "3/22/2021",
-      "userId": 1,
-      "id": 2
-    },
-    {
       "storeName": "Sinkers",
       "city": "Nashville",
       "state": "TN",
@@ -121,33 +87,6 @@
       "date": "3/23/2021",
       "userId": 2,
       "id": 3
-    },
-    {
-      "storeName": "Pilot",
-      "city": "Columbus",
-      "state": "OH",
-      "price": "432.21",
-      "date": "3/26/2021",
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "storeName": "test",
-      "city": "Testt",
-      "state": "Test",
-      "price": "test",
-      "date": "test",
-      "userId": 1,
-      "attachementUrl": "https://res.cloudinary.com/zvada/image/upload/v1600266380/lzvada/x7stgwvl08jekdd3ayxx.png",
-      "id": 5
-    },
-    {
-      "storeName": "test2",
-      "city": "test2te",
-      "state": "test2",
-      "userId": 1,
-      "attachementUrl": "https://res.cloudinary.com/zvada/image/upload/v1600267996/lzvada/ianafnbkfrlpcvwpd4xt.png",
-      "id": 6
     }
   ]
 }

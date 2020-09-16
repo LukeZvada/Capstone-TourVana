@@ -6,7 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const ShowForm = (props) => {
     const { addShow, getShows, shows, editShow } = useContext(ShowContext)
-
+    const [image, setImage] = useState('')
+    const [loading, setLoading] = useState(false)
     const [show, setShow] = useState({})
 
     const editMode = props.match.params.hasOwnProperty("showId")
@@ -36,6 +37,23 @@ export const ShowForm = (props) => {
         getShowInEditMode()
     }, [shows])
 
+    const uploadImage = async e => {
+        const files = e.target.files
+        const data = new FormData()
+        data.append('file', files[0])
+        data.append('upload_preset', 'lzvada')
+        setLoading(true)
+        const res = await fetch('https://api.cloudinary.com/v1_1/zvada/image/upload',
+            {
+            method: 'POST',
+            body: data
+            }
+        )
+        const file = await res.json()
+
+        setImage(file.secure_url)
+        setLoading(false)
+    }
 
     const constructNewShow = () => {
 
@@ -46,7 +64,8 @@ export const ShowForm = (props) => {
                     city: show.city,
                     state: show.state,
                     date: show.date,
-                    userId: localStorage.getItem("tourVana_username")
+                    userId: parseInt(localStorage.getItem("tourVana_username")),
+                    dealMemoUrl: image
                 })
                     .then(() => props.history.push("/show"))
             } else {
@@ -55,7 +74,8 @@ export const ShowForm = (props) => {
                     city: show.city,
                     state: show.state,
                     date: show.date,
-                    userId: localStorage.getItem("tourVana_username")
+                    userId: parseInt(localStorage.getItem("tourVana_username")),
+                    dealMemoUrl: image
                 })
                     .then(() => props.history.push("/show"))
             }
@@ -129,6 +149,15 @@ export const ShowForm = (props) => {
                     />
                 </div>
             </fieldset>
+            <section className="Upload">
+                    <input className="uploadImage" type="file" name="file" placeholder="Upload an image"
+                    onChange={uploadImage}
+                    />
+                    {
+                        loading ? (<h3>It's getting it ...</h3>) 
+                        : (<img src={image} style={{ width: '300px' }} />)
+                    }
+            </section>
             <section className={classes.buttonStyle}>
                 <Button className="saveShowButton" variant="contained" type="submit"
                     onClick={evt => {

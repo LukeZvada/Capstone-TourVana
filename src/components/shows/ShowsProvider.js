@@ -12,11 +12,19 @@ export const ShowContext = React.createContext()
 export const ShowProvider = (props) => {
     const [shows, setShows] = useState([])
     const [userShows, setUserShows] = useState([])
+    const [dealMemo, setDealMemo] = useState([])
 
     const getShows = () => {
+        console.log("getting shows")
         return fetch("http://localhost:8088/show")
             .then(res => res.json())
             .then(setShows)
+    }
+
+    const getDealMemo = (dealMemo) => { 
+        return fetch(`http://localhost:8088/show/${dealMemo}`)
+        .then(res => res.json())
+        .then(setDealMemo)
     }
 
     const getUserShows = (userId) => {
@@ -37,10 +45,11 @@ export const ShowProvider = (props) => {
     }
 
     const deleteShow = (showId) => {
+        console.log("delete method")
         return fetch(`http://localhost:8088/show/${showId}`, {
             method: "DELETE"
         })
-            .then(getShows)
+            .then(getUserShows)
     }
 
     const editShow = show => {
@@ -61,7 +70,8 @@ export const ShowProvider = (props) => {
     */
     return (
         <ShowContext.Provider value={{
-            shows, addShow, getShows, deleteShow, editShow, getUserShows, userShows
+            shows, addShow, getShows, deleteShow, editShow, getUserShows, userShows,
+            getDealMemo, dealMemo
         }}>
             {props.children}
         </ShowContext.Provider>

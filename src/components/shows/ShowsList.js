@@ -22,11 +22,6 @@ export const ShowList = (props) => {
         getCurrentUser()
         getUserShows(currentUserId)
     }, [])
-
-
-    // const onChange = () => { 
-    //     setDate(date);
-    // }
  
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -82,7 +77,7 @@ export const ShowList = (props) => {
                                                 <EditIcon style={{ fontSize: 20 }} className={classes.primary} /> 
                                             </button>
                                             <button className="deleteShowButton">
-                                                <AssignmentIcon style={{ fontSize: 20 }} className={classes.primary} /> 
+                                                <AssignmentIcon style={{ fontSize: 20 }} className={classes.primary} onClick={() => props.history.push(`/show/${show.id}`)} /> 
                                             </button>
                                         </div>
                                     </section>

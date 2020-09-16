@@ -4,7 +4,6 @@ import { CreditCardReportContext } from './CreditCardProvider'
 
 export const ReceiptView = (props) => {
 
-    const { purchase, getPurchase, deletePurchase, getUserPurchases, userPurchases } = useContext(CreditCardReportContext)
     const { receipt, getReceipt } = useContext(CreditCardReportContext)
     const currentReceiptId = props.match.params.purchaseId
     console.log(receipt)

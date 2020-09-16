@@ -40,7 +40,7 @@ export const CCReportProvider = (props) => {
         return fetch(`http://localhost:8088/creditCardReport/${purchaseId}`, {
             method: "DELETE"
         })
-            .then(getPurchase)
+            .then(getUserPurchases)
     }
 
     const editPurchase = purchase => {

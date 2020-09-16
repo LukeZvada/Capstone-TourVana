@@ -3,6 +3,7 @@ import { Route } from "react-router-dom"
 import { ShowProvider } from "./shows/ShowsProvider"
 import { ShowList } from "./shows/ShowsList"
 import { ShowForm } from "./shows/ShowsForm"
+import { DealMemoView } from "./shows/ShowDealMemo"
 import { UserProvider } from "./users/UsersProvider"
 import { CCReportProvider } from "./creditCardReports/CreditCardProvider"
 import { PurchaseList } from "./creditCardReports/CreditCardList"
@@ -33,6 +34,10 @@ export const ApplicationViews = (props) => {
                 </Route>
                 <Route path="/show/edit/:showId(\d+)" render ={(props) => {
                         return <ShowForm {...props}/>
+                    }}>
+                </Route>
+                <Route path="/show/:showId(\d+)" render ={(props) => {
+                        return <DealMemoView {...props}/>
                     }}>
                 </Route>
             </ShowProvider>
@@ -69,7 +74,8 @@ export const ApplicationViews = (props) => {
                     }} />
                     <Route path="/creditCardReport/:purchaseId(\d+)" render ={(props) => {
                         return <ReceiptView {...props}/>
-                    }}></Route>
+                    }}>                        
+                    </Route>
                 </UserProvider>
             </CCReportProvider>
 
