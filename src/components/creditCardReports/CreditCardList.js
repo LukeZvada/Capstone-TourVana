@@ -78,7 +78,7 @@ export const PurchaseList = (props) => {
                                                     <EditIcon style={{ fontSize: 16 }} className={classes.primary} /> 
                                                 </button>
                                                 <button className="iconBackgroundStyling">
-                                                    <AssignmentIcon style={{ fontSize: 16 }} className={classes.primary} /> 
+                                                    <AssignmentIcon style={{ fontSize: 16 }} className={classes.primary} onClick={() => props.history.push(`/creditCardReport/${purchase.id}`)} /> 
                                                 </button>
                                             </div>
                                         </div>

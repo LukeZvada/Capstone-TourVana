@@ -11,6 +11,7 @@ import { SettlementList } from "./settlements/SettlementList"
 import { SettlementImageUpload } from "./settlements/SettlementForm"
 import { SettlementImageProvider } from "./settlements/SettlementsProvider"
 import { SettlementReport } from "./settlements/SettlementReport"
+import { ReceiptView } from "./creditCardReports/CreditCardReceipt"
 
 
 
@@ -66,6 +67,9 @@ export const ApplicationViews = (props) => {
                     <Route exact path="/creditCardReport" render={(props) => {
                         return <PurchaseList history={props.history} />
                     }} />
+                    <Route path="/creditCardReport/:purchaseId(\d+)" render ={(props) => {
+                        return <ReceiptView {...props}/>
+                    }}></Route>
                 </UserProvider>
             </CCReportProvider>
 
