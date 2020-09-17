@@ -15,7 +15,6 @@ import { SettlementReport } from "./settlements/SettlementReport"
 import { ReceiptView } from "./creditCardReports/CreditCardReceipt"
 
 
-
 export const ApplicationViews = (props) => {
     return (
         <>

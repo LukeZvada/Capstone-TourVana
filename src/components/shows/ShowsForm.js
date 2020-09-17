@@ -12,7 +12,6 @@ export const ShowForm = (props) => {
 
     const editMode = props.match.params.hasOwnProperty("showId")
 
-
     const handleControlledInputChange = (event) => {
 
         const newShow = Object.assign({}, show)

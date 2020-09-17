@@ -6,6 +6,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
+
 export const NavBar = (props) => {
     return ( 
         <ul className="navbar">

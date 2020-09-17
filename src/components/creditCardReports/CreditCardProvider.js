@@ -56,8 +56,8 @@ export const CCReportProvider = (props) => {
 
     return (
         <CreditCardReportContext.Provider value={{
-            purchase, getPurchase, addPurchase, deletePurchase, editPurchase, getUserPurchases, userPurchases,
-            receipt, getReceipt
+            purchase, getPurchase, addPurchase, deletePurchase, editPurchase, 
+            getUserPurchases, userPurchases, receipt, getReceipt
         }}>
             {props.children}
         </CreditCardReportContext.Provider>

@@ -48,7 +48,7 @@ export const Register = (props) => {
         }
     }
 
-    const useStyles = makeStyles((theme) => ({
+    const useStyles = makeStyles((theme) => ({ //overwriting Material UI styles
         root: {
             '& > *': {
                 margin: theme.spacing(1),

@@ -36,7 +36,6 @@ export const SettlementImageUpload = (props) => {
             setLoading(false)
         }
            
-
         const constructNewSettlementImage = () => {
             console.log(settlementShowId)
             addSettlementImage({

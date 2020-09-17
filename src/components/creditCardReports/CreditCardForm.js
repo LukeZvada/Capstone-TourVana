@@ -12,14 +12,12 @@ export const PurchaseForm = (props) => {
 
     const editMode = props.match.params.hasOwnProperty("purchaseId")
 
-
     const handleControlledInputChange = (event) => {
 
         const newPurchase = Object.assign({}, purchases)
         newPurchase[event.target.name] = event.target.value
         setPurchase(newPurchase)
     }
-
 
     const getPurchaseInEditMode = () => {
         if (editMode) {

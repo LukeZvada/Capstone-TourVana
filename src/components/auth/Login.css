@@ -28,7 +28,6 @@
         /* -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
     }
-
     fieldset {
         min-width: 0;
         padding: 1rem 0;
@@ -48,10 +47,6 @@
         background-blend-mode: overlay;
         background-repeat: no-repeat;
     }
-    /* .label--login {
-        width: 8rem;
-        display: inline-block;
-    } */
     .button--close {
         position: relative;
         bottom: -2rem;

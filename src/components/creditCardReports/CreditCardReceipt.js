@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from "react"
 import { CreditCardReportContext } from './CreditCardProvider'
 
-
 export const ReceiptView = (props) => {
 
     const { receipt, getReceipt } = useContext(CreditCardReportContext)

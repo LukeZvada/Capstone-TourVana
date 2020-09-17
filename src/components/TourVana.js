@@ -7,10 +7,8 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 
 
-
 export const TourVana = () => (
     
-
     <>
         <Route render={() => {
             if (localStorage.getItem("tourVana_username")) {

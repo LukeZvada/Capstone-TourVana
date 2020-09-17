@@ -74,5 +74,4 @@ export const SettlementList = (props) => {
             </article>
         </>
     )
-
 }

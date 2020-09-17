@@ -2,7 +2,6 @@ import React, { useState } from "react"
 
 export const UserContext = React.createContext()
 
-
 export const UserProvider = (props) => {
     const [users, setUsers] = useState([])
     const [currentUser, setCurrentUser] = useState([])

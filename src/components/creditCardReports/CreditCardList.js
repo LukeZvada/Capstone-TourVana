@@ -20,8 +20,6 @@ export const PurchaseList = (props) => {
         getUserPurchases(currentUserId)
     }, [])
 
-    
-
     const useStyles = makeStyles((theme) => ({
         root: {
           '& > *': {

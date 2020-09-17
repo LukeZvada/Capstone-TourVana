@@ -103,7 +103,6 @@
     display: flex;
     flex-direction: column;
 }
-
 .uploadImage {
     display: flex;
     justify-content: center;

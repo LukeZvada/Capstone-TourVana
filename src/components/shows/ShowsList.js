@@ -92,6 +92,5 @@ export const ShowList = (props) => {
             </section>
         </>
     )
-
 }
 

@@ -3,7 +3,6 @@ import { ShowContext } from "../shows/ShowsProvider"
 
 export const SettlementImageContext = React.createContext()
 
-
 export const SettlementImageProvider = (props) => {
     const [settlements, setSettlements] = useState([])
     const [settlement, setSettlement] = useState([])
