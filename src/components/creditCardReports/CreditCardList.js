@@ -82,7 +82,7 @@ export const PurchaseList = (props) => {
                                         </div>
                                     </section>
                             
-                    })
+                    }).reverse()
                 }
             </article>
             <section className={classes.root}>

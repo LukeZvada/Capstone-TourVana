@@ -146,6 +146,16 @@
       "userId": 1,
       "attachementUrl": "",
       "id": 7
+    },
+    {
+      "storeName": "test",
+      "city": "New York",
+      "state": "Test",
+      "price": "123.65",
+      "date": "2020-08-25",
+      "userId": 1,
+      "attachementUrl": "",
+      "id": 8
     }
   ]
 }
