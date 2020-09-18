@@ -140,7 +140,7 @@ export const ShowForm = (props) => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="date"></label>
-                    <input type="text" name="date" required className="form-control"
+                    <input type="date" name="date" required className="form-control"
                         placeholder="Date"
                         defaultValue={show.date}
                         onChange={handleControlledInputChange}
