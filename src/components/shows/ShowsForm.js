@@ -96,7 +96,6 @@ export const ShowForm = (props) => {
                 background: "#EB5757",
                 color: "#FFFFFF",
                 width: "180px",
-                height: "20px",
                 borderRadius: "5rem",
 
             },
@@ -114,7 +113,7 @@ export const ShowForm = (props) => {
                     <input type="text" name="venueName" required autoFocus className="form-control"
                         placeholder="Venue Name"
                         defaultValue={show.venueName}
-                        onChange={handleControlledInputChange}
+                        onChange={handleControlledInputChange} 
                     />
                 </div>
             </fieldset>
@@ -153,8 +152,8 @@ export const ShowForm = (props) => {
                     onChange={uploadImage}
                     />
                     {
-                        loading ? (<h3>It's getting it ...</h3>) 
-                        : (<img src={image} style={{ width: '300px' }} />)
+                        loading ? (<div className="loading">Loading...</div>) 
+                        : (<img className="img" src={image} style={{ width: '300px' }} />)
                     }
             </section>
             <section className={classes.buttonStyle}>
