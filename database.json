@@ -42,6 +42,13 @@
       "date": "2020-09-18",
       "userId": 1,
       "dealMemoUrl": ""
+    },
+    {
+      "venueName": "test",
+      "date": "2020-09-20",
+      "userId": 1,
+      "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600785126/lzvada/cylgrag9mqjhsbtxovos.png",
+      "id": 7
     }
   ],
   "settlement": [
@@ -136,7 +143,7 @@
       "price": "143.76",
       "date": "2020-09-25",
       "userId": 1,
-      "attachementUrl": ""
+      "attachementUrl": "https://res.cloudinary.com/zvada/image/upload/v1600785674/lzvada/eufgyoltfyzwluu4zph5.png"
     }
   ]
 }

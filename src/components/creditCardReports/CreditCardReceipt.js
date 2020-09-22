@@ -12,7 +12,6 @@ export const ReceiptView = (props) => {
     
     return (
         <>
-            <h2>Purchase Receipt Image</h2>
             <section key={receipt.id} className="purchaseReceiptImage">
                 <img src={receipt.attachementUrl} />
             </section>

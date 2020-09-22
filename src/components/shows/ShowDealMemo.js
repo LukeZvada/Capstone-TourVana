@@ -11,8 +11,7 @@ export const DealMemoView = (props) => {
         
         return (
             <>
-            <h2>Deal Memo Image</h2>
-            <section key={dealMemo.id} className="purchaseReceiptImage">
+            <section key={dealMemo.id} className="dealMemoImage">
                 <img src={dealMemo.dealMemoUrl} />
             </section>
         </>
