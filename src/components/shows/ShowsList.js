@@ -87,7 +87,7 @@ export const ShowList = (props) => {
             </article>
             <section className={classes.root}>
                 <Button className="addShowButton" onClick={() => props.history.push("/show/create")}>
-                    <AddCircleOutlineIcon style={{ fontSize: 30 }} />
+                    <AddCircleOutlineIcon style={{ fontSize: 36 }} />
                 </Button>
             </section>
         </>

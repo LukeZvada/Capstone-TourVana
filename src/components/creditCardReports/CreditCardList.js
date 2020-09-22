@@ -82,12 +82,15 @@ export const PurchaseList = (props) => {
                                         </div>
                                     </section>
                             
-                    })
+                    }).reverse()
                 }
             </article>
             <section className={classes.root}>
                 <Button className="addPurchaseButton" onClick={() => props.history.push("/creditCardReport/create")}>
-                    <AddCircleOutlineIcon style={{ fontSize: 30 }} />
+                    <AddCircleOutlineIcon style={{ fontSize: 36 }} /> 
+                </Button>
+                <Button color="primary" onClick={() => props.history.push(`/creditCardReport/chart`)}>
+                    Breakdown
                 </Button>
             </section>
         </>

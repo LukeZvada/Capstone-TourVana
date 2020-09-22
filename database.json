@@ -30,27 +30,27 @@
       "venueName": "Exit Inn",
       "city": "Nashville",
       "state": "TN",
-      "date": "3/20/2021",
+      "date": "2020-09-20",
       "userId": 1,
       "dealMemoUrl": ""
     },
     {
+      "id": 5,
       "venueName": "Club Passim",
       "city": "Boston",
       "state": "MA",
-      "date": "3/21/2021",
+      "date": "2020-09-19",
       "userId": 1,
-      "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600309538/lzvada/bskfucvpipkr0ahrmor0.png",
-      "id": 5
+      "dealMemoUrl": ""
     },
     {
+      "id": 6,
       "venueName": "Irvine Plaza",
       "city": "New York",
       "state": "NY",
-      "date": "3/22/2021",
+      "date": "2020-09-18",
       "userId": 1,
-      "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600351381/lzvada/r6dqqrsns0rfmwkkqukk.png",
-      "id": 6
+      "dealMemoUrl": ""
     }
   ],
   "settlement": [
@@ -113,7 +113,7 @@
       "city": "Nashville",
       "state": "TN",
       "price": "123.65",
-      "date": "3/20/2020",
+      "date": "2020-09-22",
       "userId": 1,
       "attachementUrl": ""
     },
@@ -123,7 +123,7 @@
       "city": "New York",
       "state": "NY",
       "price": "546.67",
-      "date": "3/19/2020",
+      "date": "2020-09-23",
       "userId": 1,
       "attachementUrl": ""
     },
@@ -133,19 +133,19 @@
       "city": "Atlanta",
       "state": "GA",
       "price": "846.43",
-      "date": "3/18/2020",
+      "date": "2020-09-24",
       "userId": 1,
       "attachementUrl": ""
     },
     {
+      "id": 7,
       "storeName": "Sinkers",
       "city": "Nashville",
       "state": "TN",
       "price": "143.76",
-      "date": "3/18/2020",
+      "date": "2020-09-25",
       "userId": 1,
-      "attachementUrl": "",
-      "id": 7
+      "attachementUrl": ""
     }
   ]
 }

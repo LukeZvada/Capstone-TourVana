@@ -100,6 +100,15 @@
 .uploadImage { 
     display: flex;
     justify-content: center;
-    margin-left: 23rem;
+    margin-left: -4.5rem;
     margin-top: -5rem;
+}
+.uploadImage {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox { 
+    display: flex;
+    flex-direction: row;
 }

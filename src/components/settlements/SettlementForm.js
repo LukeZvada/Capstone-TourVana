@@ -49,12 +49,12 @@ export const SettlementImageUpload = (props) => {
             <section className="settlement--card">
 
                 <div className="Upload">
-                    <input type="file" name="file" placeholder="Upload an image"
+                    <input className="img" type="file" name="file" placeholder="Upload an image"
                     onChange={uploadImage}
                     />
                     {
                         loading ? (<h3>It's getting it ...</h3>) 
-                        : (<img src={image} style={{ width: '300px' }} />)
+                        : (<img className="img" src={image} style={{ width: '300px' }} />)
                     }
                 </div>
                 <div className="saveImageButton">
@@ -70,3 +70,6 @@ export const SettlementImageUpload = (props) => {
             </section>
         )
 }
+
+
+// (<img className="img" src={image} style={{ width: '300px' }} />

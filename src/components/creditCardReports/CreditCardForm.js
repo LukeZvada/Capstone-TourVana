@@ -64,7 +64,9 @@ export const PurchaseForm = (props) => {
                     price: purchases.price,
                     date: purchases.date,
                     userId: parseInt(localStorage.getItem("tourVana_username")),
-                    attachementUrl: image
+                    attachementUrl: image,
+                    groceries: purchases.groceries
+
                 })
                     .then(() => props.history.push("/creditCardReport"))
             } else {
@@ -75,7 +77,8 @@ export const PurchaseForm = (props) => {
                     price: purchases.price,
                     date: purchases.date,
                     userId: parseInt(localStorage.getItem("tourVana_username")),
-                    attachementUrl: image
+                    attachementUrl: image,
+                    groceries: purchases.groceries
                 })
                     .then(() => props.history.push("/creditCardReport"))
             }
@@ -152,13 +155,39 @@ export const PurchaseForm = (props) => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="date"></label>
-                    <input type="text" name="date" required className="form-control"
+                    <input type="date" name="date" required className="form-control"
                         placeholder="Date"
                         defaultValue={purchases.date}
                         onChange={handleControlledInputChange}
                     />
                 </div>
             </fieldset>
+            {/* <fieldset>
+                <div className="form-group">
+                    <label htmlFor="groceries"></label>
+                    <input type="checkbox" name="groceries" required className="checkbox"
+                        placeholder="Groceries"
+                        defaultValue={purchases.groceries}
+                        onChange={handleControlledInputChange}
+                    /> Groceries 
+                </div>
+                <div className="form-group">
+                    <label htmlFor="restuarants"></label>
+                    <input type="checkbox" name="restuarants" required className="checkbox"
+                        placeholder="restuarants"
+                        defaultValue={purchases.restuarants}
+                        onChange={handleControlledInputChange}
+                    /> Restuarants and Dining
+                </div>
+                <div className="form-group">
+                    <label htmlFor="travel"></label>
+                    <input type="checkbox" name="travel" required className="checkbox"
+                        placeholder="travel"
+                        defaultValue={purchases.travel}
+                        onChange={handleControlledInputChange}
+                    /> Travel
+                </div>
+            </fieldset> */}
             <section className="Upload">
                     <input className="uploadImage" type="file" name="file" placeholder="Upload an image"
                     onChange={uploadImage}
