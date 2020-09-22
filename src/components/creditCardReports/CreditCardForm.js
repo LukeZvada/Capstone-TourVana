@@ -194,7 +194,7 @@ export const PurchaseForm = (props) => {
                     />
                     {
                         loading ? (<div className="loading">Loading...</div>) 
-                        : (<img className="imgCC" src={image} style={{ width: '300px' }} />)
+                        : (<img className="imgCC" src={image} style={{ width: '100px' }} />)
                     }
             </section>
             <section className={classes.buttonStyle}>

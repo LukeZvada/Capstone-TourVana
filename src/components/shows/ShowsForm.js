@@ -153,7 +153,7 @@ export const ShowForm = (props) => {
                     />
                     {
                         loading ? (<div className="loading">Loading...</div>) 
-                        : (<img className="img" src={image} style={{ width: '300px' }} />)
+                        : (<img className="img" src={image} style={{ width: '100px' }} />)
                     }
             </section>
             <section className={classes.buttonStyle}>
