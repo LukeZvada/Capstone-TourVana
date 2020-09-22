@@ -6,6 +6,7 @@ export const SettlementImageContext = React.createContext()
 export const SettlementImageProvider = (props) => {
     const [settlements, setSettlements] = useState([])
     const [settlement, setSettlement] = useState([])
+    const [searchSettlementTerms, setSettlementTerms] = useState("")
 
     // create an addSettlement method
     const addSettlementImage = image => {
@@ -33,7 +34,7 @@ export const SettlementImageProvider = (props) => {
     return (
         <SettlementImageContext.Provider value={{
             getSettlements, settlements, getSettlement, settlement,
-            addSettlementImage
+            addSettlementImage, searchSettlementTerms, setSettlementTerms
         }}>
             {props.children}
         </SettlementImageContext.Provider>

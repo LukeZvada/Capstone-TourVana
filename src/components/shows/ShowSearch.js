@@ -6,7 +6,7 @@ export const ShowSearch = () => {
 
     return (
         <>
-            <input type="text" className="show__search"
+            <input type="text" className="showSearch"
                 onChange={
                     (changeEvent) => {
                         setTerms(changeEvent.target.value)

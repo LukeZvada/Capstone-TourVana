@@ -35,24 +35,22 @@
       "id": 8
     },
     {
-      "venueName": "Irvine Plaza",
-      "city": "New York",
-      "state": "Test",
+      "venueName": "Club Passim",
+      "city": "Boston",
+      "state": "MA",
+      "date": "2020-09-11",
       "userId": 1,
       "dealMemoUrl": "",
-      "id": 9
+      "id": 12
     },
     {
-      "venueName": "iy",
+      "venueName": "The Wiltern",
+      "city": "Los Angeles ",
+      "state": "CA",
+      "date": "2020-09-23",
       "userId": 1,
       "dealMemoUrl": "",
-      "id": 10
-    },
-    {
-      "venueName": "iytd",
-      "userId": 1,
-      "dealMemoUrl": "",
-      "id": 11
+      "id": 13
     }
   ],
   "settlement": [

@@ -14,6 +14,7 @@ import { SettlementImageUpload } from "./settlements/SettlementForm"
 import { SettlementImageProvider } from "./settlements/SettlementsProvider"
 import { SettlementReport } from "./settlements/SettlementReport"
 import { ReceiptView } from "./creditCardReports/CreditCardReceipt"
+import { SettlementSearch } from "./settlements/SettlementSearch"
 
 
 
@@ -23,9 +24,11 @@ export const ApplicationViews = (props) => {
             <ShowProvider>
                 <UserProvider>
                     <Route exact path="/show" render={(props) => {
-                        return <ShowList history={props.history} />
+                        return <> 
+                            <ShowList history={props.history} />
+                            <ShowSearch />
+                        </>
                     }} />
-                    <ShowSearch />
                 </UserProvider>
             </ShowProvider>
 
@@ -48,8 +51,12 @@ export const ApplicationViews = (props) => {
                 <UserProvider>
                     <SettlementImageProvider>
                         <Route exact path="/settlement" render={(props) => {
-                            return <SettlementList history={props.history} />
+                            return <> 
+                            <SettlementList history={props.history} />
+                            <SettlementSearch />
+                            </>
                         }} />
+                        
                     </SettlementImageProvider>
                 </UserProvider>
             </ShowProvider>

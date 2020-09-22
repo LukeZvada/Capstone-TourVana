@@ -13,7 +13,8 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 export const SettlementList = (props) => { 
     const { userShows, getUserShows } = useContext(ShowContext)
     const { getCurrentUser } = useContext(UserContext)
-    const { settlements, getSettlements } = useContext(SettlementImageContext)
+    const { settlements, getSettlements, searchSettlementTerms } = useContext(SettlementImageContext)
+    const [filteredSettlements, setFilteredSettlements] = useState([])
     const currentUserId = parseInt(localStorage.getItem("tourVana_username"))
 
     useEffect(() => {
@@ -21,6 +22,15 @@ export const SettlementList = (props) => {
         getUserShows(currentUserId)
         getSettlements()
     }, [])
+
+    useEffect(() => {
+        const matchingSettlement = userShows.filter(show => show.venueName.toLowerCase().includes(searchSettlementTerms.toLowerCase()))
+        setFilteredSettlements(matchingSettlement)
+    }, [searchSettlementTerms])
+
+    useEffect(() => {
+        setFilteredSettlements(userShows)
+    }, [userShows])
 
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -53,7 +63,7 @@ export const SettlementList = (props) => {
 
             <article className="showsContainer">
                 {
-                    userShows.map(show => {
+                    filteredSettlements.map(show => {
                         const currentSettlement = settlements.find(settlement => settlement.showId === show.id) || {}
                         return <section key={show.id} className="shows">
                                     <div className="showDate">{show.date} </div>
