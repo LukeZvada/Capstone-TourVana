@@ -193,7 +193,7 @@ export const PurchaseForm = (props) => {
                     onChange={uploadImage}
                     />
                     {
-                        loading ? (<h3>It's getting it ...</h3>) 
+                        loading ? (<div className="loading">Loading...</div>) 
                         : (<img src={image} style={{ width: '300px' }} />)
                     }
             </section>

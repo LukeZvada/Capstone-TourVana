@@ -26,15 +26,6 @@
       "id": 3
     },
     {
-      "id": 4,
-      "venueName": "Exit Inn",
-      "city": "Nashville",
-      "state": "TN",
-      "date": "2020-09-20",
-      "userId": 1,
-      "dealMemoUrl": ""
-    },
-    {
       "id": 5,
       "venueName": "Club Passim",
       "city": "Boston",
