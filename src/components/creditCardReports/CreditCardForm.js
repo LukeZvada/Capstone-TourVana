@@ -189,12 +189,12 @@ export const PurchaseForm = (props) => {
                 </div>
             </fieldset> */}
             <section className="Upload">
-                    <input className="uploadImage" type="file" name="file" placeholder="Upload an image"
+                    <input className="uploadImageCC" type="file" name="file" placeholder="Upload an image"
                     onChange={uploadImage}
                     />
                     {
                         loading ? (<div className="loading">Loading...</div>) 
-                        : (<img src={image} style={{ width: '300px' }} />)
+                        : (<img className="imgCC" src={image} style={{ width: '300px' }} />)
                     }
             </section>
             <section className={classes.buttonStyle}>
