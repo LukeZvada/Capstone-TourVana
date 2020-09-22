@@ -110,7 +110,11 @@
     margin-top: -5rem;
 }
 
-
+.img { 
+    display: flex;
+    justify-content: center;
+    margin-left: -10rem;
+}
 
 .checkbox { 
     display: flex;
