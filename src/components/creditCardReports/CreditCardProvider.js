@@ -6,6 +6,7 @@ export const CCReportProvider = (props) => {
     const [purchase, setPurchase] = useState([])
     const [userPurchases, setUserPurchases] = useState([])
     const [receipt, setReceipt] = useState([])
+    const [searchExpenseTerms, setExpenseTerms] = useState("")
 
     const getPurchase = () => {
         return fetch("http://localhost:8088/creditCardReport")
@@ -57,7 +58,7 @@ export const CCReportProvider = (props) => {
     return (
         <CreditCardReportContext.Provider value={{
             purchase, getPurchase, addPurchase, deletePurchase, editPurchase, 
-            getUserPurchases, userPurchases, receipt, getReceipt
+            getUserPurchases, userPurchases, receipt, getReceipt, searchExpenseTerms, setExpenseTerms
         }}>
             {props.children}
         </CreditCardReportContext.Provider>

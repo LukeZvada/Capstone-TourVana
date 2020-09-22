@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CreditCardReportContext } from './CreditCardProvider'
 import { UserContext } from "../users/UsersProvider"
 import "./creditCardReport.css"
@@ -10,8 +10,9 @@ import EditIcon from '@material-ui/icons/Edit';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
 export const PurchaseList = (props) => {
-    const { purchase, getPurchase, deletePurchase, getUserPurchases, userPurchases } = useContext(CreditCardReportContext)
+    const { purchase, getPurchase, deletePurchase, getUserPurchases, userPurchases, searchExpenseTerms } = useContext(CreditCardReportContext)
     const { users, getUsers, getCurrentUser, currentUser } = useContext(UserContext)
+    const [filteredExpenses, setFilteredExpenses] = useState([])
     const currentUserId = parseInt(localStorage.getItem("tourVana_username"))
 
     useEffect(() => {
@@ -19,6 +20,15 @@ export const PurchaseList = (props) => {
         getCurrentUser()
         getUserPurchases(currentUserId)
     }, [])
+
+    useEffect(() => {
+        const matchingExpense = userPurchases.filter(expense => expense.storeName.toLowerCase().includes(searchExpenseTerms.toLowerCase()))
+        setFilteredExpenses(matchingExpense)
+    }, [searchExpenseTerms])
+
+    useEffect(() => {
+        setFilteredExpenses(userPurchases)
+    }, [userPurchases])
 
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -55,7 +65,7 @@ export const PurchaseList = (props) => {
 
             <article className="purchaseContainer">
                 {
-                    userPurchases.map(purchase => {
+                    filteredExpenses.map(purchase => {
                             return <section key={purchase.id} className="purchases">
                                         <div className="purchaseDate">{purchase.date} </div>
                                         <div className="storeName"> <h1 className="storeTitle"> {purchase.storeName} </h1> <h2 className="storeSubTitle"> {purchase.city}, {purchase.state} </h2></div> 
