@@ -6,6 +6,7 @@ export const ShowProvider = (props) => {
     const [shows, setShows] = useState([])
     const [userShows, setUserShows] = useState([])
     const [dealMemo, setDealMemo] = useState([])
+    const [searchTerms, setTerms] = useState("")
 
     const getShows = () => {
         console.log("getting shows")
@@ -59,7 +60,7 @@ export const ShowProvider = (props) => {
     return (
         <ShowContext.Provider value={{
             shows, addShow, getShows, deleteShow, editShow, getUserShows, userShows,
-            getDealMemo, dealMemo
+            getDealMemo, dealMemo, searchTerms, setTerms
         }}>
             {props.children}
         </ShowContext.Provider>

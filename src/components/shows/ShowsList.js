@@ -11,9 +11,9 @@ import EditIcon from '@material-ui/icons/Edit';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
 export const ShowList = (props) => {
-    const { shows, getShows, userShows, getUserShows, deleteShow } = useContext(ShowContext)
+    const { shows, getShows, userShows, getUserShows, deleteShow, searchTerms } = useContext(ShowContext)
     const { users, getUsers, getCurrentUser, currentUser } = useContext(UserContext)
-    const [ date, setDate ] = useState(new Date());
+    const [filteredShows, setFiltered] = useState([])
     const currentUserId = parseInt(localStorage.getItem("tourVana_username"))
 
     useEffect(() => {
@@ -22,6 +22,16 @@ export const ShowList = (props) => {
         getCurrentUser()
         getUserShows(currentUserId)
     }, [])
+    
+    useEffect(() => {
+        const matchingShow = userShows.filter(show => show.venueName.toLowerCase().includes(searchTerms.toLowerCase()))
+        setFiltered(matchingShow)
+    }, [searchTerms])
+
+    useEffect(() => {
+        setFiltered(userShows)
+    }, [userShows])
+
  
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -59,7 +69,7 @@ export const ShowList = (props) => {
 
             <article className="showsContainer">
                 {
-                    userShows.map(show => {
+                    filteredShows.map(show => {
                             return <section key={show.id} className="shows">
                                         <div className="showDate">{show.date} </div>
                                         <div className="showLocation"> <h1 className="venueTitle"> {show.venueName} </h1> <h2 className="venueSubTitle">{show.city}, {show.state}</h2> </div> 

@@ -26,29 +26,33 @@
       "id": 3
     },
     {
-      "id": 5,
-      "venueName": "Club Passim",
-      "city": "Boston",
-      "state": "MA",
-      "date": "2020-09-19",
+      "venueName": "Exit Inn",
+      "city": "Nashville",
+      "state": "TN",
+      "date": "2020-09-16",
       "userId": 1,
-      "dealMemoUrl": ""
+      "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600786917/lzvada/dhrlrowbh3pqzmiiz85v.png",
+      "id": 8
     },
     {
-      "id": 6,
       "venueName": "Irvine Plaza",
       "city": "New York",
-      "state": "NY",
-      "date": "2020-09-18",
+      "state": "Test",
       "userId": 1,
-      "dealMemoUrl": ""
+      "dealMemoUrl": "",
+      "id": 9
     },
     {
-      "venueName": "test",
-      "date": "2020-09-20",
+      "venueName": "iy",
       "userId": 1,
-      "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600785126/lzvada/cylgrag9mqjhsbtxovos.png",
-      "id": 7
+      "dealMemoUrl": "",
+      "id": 10
+    },
+    {
+      "venueName": "iytd",
+      "userId": 1,
+      "dealMemoUrl": "",
+      "id": 11
     }
   ],
   "settlement": [
@@ -106,32 +110,12 @@
       "id": 3
     },
     {
-      "id": 4,
-      "storeName": "Kroger",
-      "city": "Nashville",
-      "state": "TN",
-      "price": "123.65",
-      "date": "2020-09-22",
-      "userId": 1,
-      "attachementUrl": ""
-    },
-    {
       "id": 5,
       "storeName": "Le Méridien",
       "city": "New York",
       "state": "NY",
       "price": "546.67",
       "date": "2020-09-23",
-      "userId": 1,
-      "attachementUrl": ""
-    },
-    {
-      "id": 6,
-      "storeName": "Delta Airlines",
-      "city": "Atlanta",
-      "state": "GA",
-      "price": "846.43",
-      "date": "2020-09-24",
       "userId": 1,
       "attachementUrl": ""
     },

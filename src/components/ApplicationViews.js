@@ -3,6 +3,7 @@ import { Route } from "react-router-dom"
 import { ShowProvider } from "./shows/ShowsProvider"
 import { ShowList } from "./shows/ShowsList"
 import { ShowForm } from "./shows/ShowsForm"
+import { ShowSearch } from "./shows/ShowSearch"
 import { DealMemoView } from "./shows/ShowDealMemo"
 import { UserProvider } from "./users/UsersProvider"
 import { CCReportProvider } from "./creditCardReports/CreditCardProvider"
@@ -15,6 +16,7 @@ import { SettlementReport } from "./settlements/SettlementReport"
 import { ReceiptView } from "./creditCardReports/CreditCardReceipt"
 
 
+
 export const ApplicationViews = (props) => {
     return (
         <>
@@ -23,6 +25,7 @@ export const ApplicationViews = (props) => {
                     <Route exact path="/show" render={(props) => {
                         return <ShowList history={props.history} />
                     }} />
+                    <ShowSearch />
                 </UserProvider>
             </ShowProvider>
 
