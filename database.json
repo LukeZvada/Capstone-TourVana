@@ -16,42 +16,6 @@
     }
   ],
   "show": [
-    {
-      "venueName": "Irvine Plaza",
-      "city": "New York",
-      "state": "NY",
-      "date": "12/20/20",
-      "userId": 2,
-      "dealMemoUrl": "",
-      "id": 3
-    },
-    {
-      "venueName": "Exit Inn",
-      "city": "Nashville",
-      "state": "TN",
-      "date": "2020-09-16",
-      "userId": 1,
-      "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600786917/lzvada/dhrlrowbh3pqzmiiz85v.png",
-      "id": 8
-    },
-    {
-      "venueName": "Club Passim",
-      "city": "Boston",
-      "state": "MA",
-      "date": "2020-09-11",
-      "userId": 1,
-      "dealMemoUrl": "",
-      "id": 12
-    },
-    {
-      "venueName": "The Wiltern",
-      "city": "Los Angeles ",
-      "state": "CA",
-      "date": "2020-09-23",
-      "userId": 1,
-      "dealMemoUrl": "",
-      "id": 13
-    }
   ],
   "settlement": [
     {
@@ -88,6 +52,16 @@
       "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1600309596/lzvada/mkdg09ahp1qdc5cwbzkg.png",
       "showId": 4,
       "id": 7
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1600809146/lzvada/x0jb6gzjj3lmjickfk1r.png",
+      "showId": 12,
+      "id": 8
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1600809431/lzvada/gd5b5puwxwqg4ron8bbb.png",
+      "showId": 8,
+      "id": 9
     }
   ],
   "dealMemo": [

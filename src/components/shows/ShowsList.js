@@ -76,7 +76,7 @@ export const ShowList = (props) => {
                                         <div className="showIcons"> 
                                             <button className="deleteShowButton" variant="contained"
                                                 onClick={
-                                                    () => deleteShow(show.id).then(props.history.push("/show"))
+                                                    () => deleteShow(show.id)
                                                 }>
                                                 <DeleteIcon style={{ fontSize: 20 }} className={classes.primary} /> 
                                             </button>

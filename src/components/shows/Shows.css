@@ -126,3 +126,19 @@
     height: 50rem;
 }
 
+.uploadImgSettlement {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20rem;
+    margin-top: -5rem;
+}
+.imgSettlement { 
+    display: flex;
+    justify-content: center;
+    margin-left: -15rem;
+    margin-bottom: 2rem;
+}
+
+
+

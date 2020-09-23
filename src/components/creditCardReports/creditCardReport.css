@@ -127,3 +127,8 @@
     justify-content: center;
     margin-top: 6rem;
 }
+
+.expenseSearch { 
+    display: flex;
+    position: fixed;
+}

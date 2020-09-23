@@ -43,7 +43,9 @@ export const ShowProvider = (props) => {
         return fetch(`http://localhost:8088/show/${showId}`, {
             method: "DELETE"
         })
-            .then(getUserShows)
+            .then(() => {
+                getUserShows(localStorage.getItem("tourVana_username"))
+            })
     }
 
     const editShow = show => {
