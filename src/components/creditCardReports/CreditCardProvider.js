@@ -41,8 +41,10 @@ export const CCReportProvider = (props) => {
         return fetch(`http://localhost:8088/creditCardReport/${purchaseId}`, {
             method: "DELETE"
         })
-            .then(getUserPurchases)
-    }
+            .then(() => {
+                getUserPurchases(localStorage.getItem("tourVana_username"))
+    })
+}
 
     const editPurchase = purchase => {
         return fetch(`http://localhost:8088/creditCardReport/${purchase.id}`, {

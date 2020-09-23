@@ -16,6 +16,7 @@ import { SettlementReport } from "./settlements/SettlementReport"
 import { ReceiptView } from "./creditCardReports/CreditCardReceipt"
 import { SettlementSearch } from "./settlements/SettlementSearch"
 import { ExpenseSearch } from "./creditCardReports/CreditCardSearch"
+import { CreditCardChart } from "./creditCardReports/CreditCardChart"
 
 
 
@@ -99,6 +100,10 @@ export const ApplicationViews = (props) => {
                 </Route>
                 <Route path="/creditCardReport/edit/:purchaseId(\d+)" render ={(props) => {
                         return <PurchaseForm {...props}/>
+                    }}>
+                </Route>
+                <Route path="/creditCardReport/chart" render ={(props) => {
+                        return <CreditCardChart {...props} />
                     }}>
                 </Route>
             </CCReportProvider>

@@ -16,6 +16,33 @@
     }
   ],
   "show": [
+    {
+      "venueName": "Exit Inn",
+      "city": "Nashville",
+      "state": "TN",
+      "date": "2020-09-22",
+      "userId": 1,
+      "dealMemoUrl": "",
+      "id": 1
+    },
+    {
+      "venueName": "Irvine Plaza",
+      "city": "New York",
+      "state": "NY",
+      "date": "2020-09-24",
+      "userId": 1,
+      "dealMemoUrl": "",
+      "id": 2
+    },
+    {
+      "venueName": "Club Passim",
+      "city": "Boston",
+      "state": "MA",
+      "date": "2020-09-26",
+      "userId": 1,
+      "dealMemoUrl": "",
+      "id": 3
+    }
   ],
   "settlement": [
     {
@@ -89,17 +116,8 @@
       "price": "546.67",
       "date": "2020-09-23",
       "userId": 1,
-      "attachementUrl": ""
-    },
-    {
-      "id": 7,
-      "storeName": "Sinkers",
-      "city": "Nashville",
-      "state": "TN",
-      "price": "143.76",
-      "date": "2020-09-25",
-      "userId": 1,
-      "attachementUrl": "https://res.cloudinary.com/zvada/image/upload/v1600785674/lzvada/eufgyoltfyzwluu4zph5.png"
+      "attachementUrl": "",
+      "groceries": true
     }
   ]
 }

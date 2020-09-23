@@ -132,3 +132,15 @@
     display: flex;
     position: fixed;
 }
+
+.CCChart {
+    width: 100%;
+    margin: 1px auto;
+}
+
+.chartTitle { 
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 4rem;
+}
