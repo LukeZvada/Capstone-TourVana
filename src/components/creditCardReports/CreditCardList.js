@@ -56,10 +56,8 @@ export const PurchaseList = (props) => {
     return (
         <>
 
-            <article> 
-            <img className="creditCardImage" src={ require('../images/amex.png') } />
-            </article>
-            <article>
+            <article class="creditCardHeader"> 
+                <img className="creditCardImage" src={ require('../images/amex.png') } />
                 <div><h2 className="expenses">Expenses</h2></div>
             </article>
 
@@ -99,7 +97,7 @@ export const PurchaseList = (props) => {
                 <Button className="addPurchaseButton" onClick={() => props.history.push("/creditCardReport/create")}>
                     <AddCircleOutlineIcon style={{ fontSize: 36 }} /> 
                 </Button>
-                <Button color="primary" onClick={() => props.history.push(`/creditCardReport/chart`)}>
+                <Button className="breakdown" color="primary" onClick={() => props.history.push(`/creditCardReport/chart`)}>
                     Breakdown
                 </Button>
             </section>

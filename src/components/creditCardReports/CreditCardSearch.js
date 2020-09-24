@@ -6,13 +6,15 @@ export const ExpenseSearch = () => {
 
     return (
         <>
-            <input type="text" className="expenseSearch"
-                onChange={
-                    (changeEvent) => {
-                        setExpenseTerms(changeEvent.target.value)
+            <article className="expenseSearch">
+                <input type="text"
+                    onChange={
+                        (changeEvent) => {
+                            setExpenseTerms(changeEvent.target.value)
+                        }
                     }
-                }
-                placeholder="Search" />
+                    placeholder="Search" />
+            </article>
         </>
     )
 }

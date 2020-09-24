@@ -106,7 +106,8 @@
       "price": "165.54",
       "date": "3/23/2021",
       "userId": 2,
-      "id": 3
+      "id": 3,
+      "category": "travel"
     },
     {
       "id": 5,
@@ -117,28 +118,88 @@
       "date": "2020-09-23",
       "userId": 1,
       "attachementUrl": "",
-      "groceries": true
+      "category": "entertainment"
     },
     {
       "id": 6,
       "storeName": "Kroger",
       "city": "Nashville",
       "state": "TN",
-      "price": "546.67",
+      "price": "100.00",
       "date": "2020-09-25",
       "userId": 1,
-      "attachementUrl": ""
+      "attachementUrl": "",
+      "category": "travel"
     },
     {
-      "id": 7,
-      "storeName": "Test Name",
-      "city": "Nashville",
-      "state": "TN",
-      "price": "15.84",
-      "date": "2020-09-10",
+      "id": 8,
+      "storeName": "Pilot",
+      "city": "New York",
+      "state": "NY",
+      "price": "75.23",
+      "date": "2020-09-27",
       "userId": 1,
       "attachementUrl": "",
-      "category": "groceries"
+      "category": "travel"
+    },
+    {
+      "storeName": "Kroger",
+      "city": "Nashville",
+      "state": "TN",
+      "price": "123.65",
+      "date": "2020-09-23",
+      "userId": 1,
+      "attachementUrl": "https://res.cloudinary.com/zvada/image/upload/v1600974345/lzvada/rtdsn7zzyvxscbrdx8kw.png",
+      "category": "travel",
+      "id": 9
+    },
+    {
+      "storeName": "Parker Hotel",
+      "city": "Nashville",
+      "state": "TN",
+      "price": "546.67",
+      "date": "2020-12-31",
+      "userId": 1,
+      "attachementUrl": "",
+      "category": "groceries",
+      "id": 10
+    },
+    {
+      "storeName": "KrogerPlus",
+      "city": "Nashville",
+      "state": "TN",
+      "price": "254.23",
+      "date": "1321-12-31",
+      "userId": 1,
+      "attachementUrl": "",
+      "category": "groceries",
+      "id": 11
+    },
+    {
+      "storeName": "Parker Hotel",
+      "city": "New York",
+      "state": "NY",
+      "price": "800",
+      "date": "1000-12-15",
+      "userId": 1,
+      "attachementUrl": "",
+      "category": "travel",
+      "id": 12
+    },
+    {
+      "storeName": "Kroger",
+      "price": "200",
+      "userId": 1,
+      "attachementUrl": "",
+      "category": "groceries",
+      "id": 13
+    },
+    {
+      "price": "700",
+      "userId": 1,
+      "attachementUrl": "",
+      "category": "groceries",
+      "id": 14
     }
   ]
 }
