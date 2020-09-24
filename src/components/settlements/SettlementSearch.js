@@ -6,13 +6,15 @@ export const SettlementSearch = () => {
 
     return (
         <>
-            <input type="text" className="settlementSearch"
-                onChange={
-                    (changeEvent) => {
-                        setSettlementTerms(changeEvent.target.value)
+            <article className="showSearch">
+                <input type="text"
+                    onChange={
+                        (changeEvent) => {
+                            setSettlementTerms(changeEvent.target.value)
+                        }
                     }
-                }
-                placeholder="Search" />
+                    placeholder="Search" />
+            </article>
         </>
     )
 }
