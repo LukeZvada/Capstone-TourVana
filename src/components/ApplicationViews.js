@@ -27,8 +27,8 @@ export const ApplicationViews = (props) => {
                 <UserProvider>
                     <Route exact path="/show" render={(props) => {
                         return <> 
-                            <ShowList history={props.history} />
                             <ShowSearch />
+                            <ShowList history={props.history} />
                         </>
                     }} />
                 </UserProvider>
@@ -54,8 +54,8 @@ export const ApplicationViews = (props) => {
                     <SettlementImageProvider>
                         <Route exact path="/settlement" render={(props) => {
                             return <> 
-                            <SettlementList history={props.history} />
                             <SettlementSearch />
+                            <SettlementList history={props.history} />
                             </>
                         }} />
                         

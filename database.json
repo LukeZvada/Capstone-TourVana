@@ -185,21 +185,6 @@
       "attachementUrl": "",
       "category": "travel",
       "id": 12
-    },
-    {
-      "storeName": "Kroger",
-      "price": "200",
-      "userId": 1,
-      "attachementUrl": "",
-      "category": "groceries",
-      "id": 13
-    },
-    {
-      "price": "700",
-      "userId": 1,
-      "attachementUrl": "",
-      "category": "groceries",
-      "id": 14
     }
   ]
 }

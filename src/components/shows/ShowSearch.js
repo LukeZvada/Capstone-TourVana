@@ -6,13 +6,15 @@ export const ShowSearch = () => {
 
     return (
         <>
-            <input type="text" className="showSearch"
-                onChange={
-                    (changeEvent) => {
-                        setTerms(changeEvent.target.value)
+            <article className="showSearch">
+                <input type="text" 
+                    onChange={
+                        (changeEvent) => {
+                            setTerms(changeEvent.target.value)
+                        }
                     }
-                }
-                placeholder="Search" />
+                    placeholder="Search" />
+            </article>
         </>
     )
 }
