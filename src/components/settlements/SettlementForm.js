@@ -72,4 +72,3 @@ export const SettlementImageUpload = (props) => {
 }
 
 
-// (<img className="img" src={image} style={{ width: '300px' }} />

@@ -13,7 +13,6 @@ export const PurchaseForm = (props) => {
     const editMode = props.match.params.hasOwnProperty("purchaseId")
 
     const handleControlledInputChange = (event) => {
-
         const newPurchase = Object.assign({}, purchases)
         newPurchase[event.target.name] = event.target.value
         setPurchase(newPurchase)
@@ -55,34 +54,34 @@ export const PurchaseForm = (props) => {
 
     const constructNewPurchase = () => {
 
-            if (editMode) {
-                editPurchase({
-                    id: purchases.id,
-                    storeName: purchases.storeName,
-                    city: purchases.city,
-                    state: purchases.state,
-                    price: purchases.price,
-                    date: purchases.date,
-                    userId: parseInt(localStorage.getItem("tourVana_username")),
-                    attachementUrl: image,
-                    groceries: purchases.groceries
+        if (editMode) {
+            editPurchase({
+                id: purchases.id,
+                storeName: purchases.storeName,
+                city: purchases.city,
+                state: purchases.state,
+                price: purchases.price,
+                date: purchases.date,
+                userId: parseInt(localStorage.getItem("tourVana_username")),
+                attachementUrl: image,
+                category: purchases.category
 
-                })
-                    .then(() => props.history.push("/creditCardReport"))
-            } else {
-                addPurchase({
-                    storeName: purchases.storeName,
-                    city: purchases.city,
-                    state: purchases.state,
-                    price: purchases.price,
-                    date: purchases.date,
-                    userId: parseInt(localStorage.getItem("tourVana_username")),
-                    attachementUrl: image,
-                    groceries: purchases.groceries
-                })
-                    .then(() => props.history.push("/creditCardReport"))
-            }
+            })
+                .then(() => props.history.push("/creditCardReport"))
+        } else {
+            addPurchase({
+                storeName: purchases.storeName,
+                city: purchases.city,
+                state: purchases.state,
+                price: purchases.price,
+                date: purchases.date,
+                userId: parseInt(localStorage.getItem("tourVana_username")),
+                attachementUrl: image,
+                category: purchases.category
+            })
+                .then(() => props.history.push("/creditCardReport"))
         }
+    }
 
 
     const useStyles = makeStyles((theme) => ({
@@ -162,32 +161,22 @@ export const PurchaseForm = (props) => {
                     />
                 </div>
             </fieldset>
-            {/* <fieldset>
+            <fieldset>
                 <div className="form-group">
-                    <label htmlFor="groceries"></label>
-                    <input type="checkbox" name="groceries" required className="checkbox"
-                        placeholder="Groceries"
-                        defaultValue={purchases.groceries}
-                        onChange={handleControlledInputChange}
-                    /> Groceries 
+                    <select name="category" id="category" className="form-control" defaultValue={purchases.category} onChange={handleControlledInputChange} >
+                        <option value="0">Select a category</option>
+                        <option value="groceries">
+                            Groceries
+                        </option>
+                        <option value="travel">
+                            Travel
+                        </option>
+                        <option value="entertainment">
+                            Entertainment
+                        </option>
+                    </select>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="restuarants"></label>
-                    <input type="checkbox" name="restuarants" required className="checkbox"
-                        placeholder="restuarants"
-                        defaultValue={purchases.restuarants}
-                        onChange={handleControlledInputChange}
-                    /> Restuarants and Dining
-                </div>
-                <div className="form-group">
-                    <label htmlFor="travel"></label>
-                    <input type="checkbox" name="travel" required className="checkbox"
-                        placeholder="travel"
-                        defaultValue={purchases.travel}
-                        onChange={handleControlledInputChange}
-                    /> Travel
-                </div>
-            </fieldset> */}
+            </fieldset>
             <section className="Upload">
                     <input className="uploadImageCC" type="file" name="file" placeholder="Upload an image"
                     onChange={uploadImage}

@@ -118,6 +118,27 @@
       "userId": 1,
       "attachementUrl": "",
       "groceries": true
+    },
+    {
+      "id": 6,
+      "storeName": "Kroger",
+      "city": "Nashville",
+      "state": "TN",
+      "price": "546.67",
+      "date": "2020-09-25",
+      "userId": 1,
+      "attachementUrl": ""
+    },
+    {
+      "id": 7,
+      "storeName": "Test Name",
+      "city": "Nashville",
+      "state": "TN",
+      "price": "15.84",
+      "date": "2020-09-10",
+      "userId": 1,
+      "attachementUrl": "",
+      "category": "groceries"
     }
   ]
 }
