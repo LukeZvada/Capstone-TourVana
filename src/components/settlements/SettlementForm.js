@@ -1,5 +1,7 @@
 import React, { useState, useContext, useEffect } from "react"
 import { SettlementImageContext } from "./SettlementsProvider"
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
 import { ShowContext } from "../shows/ShowsProvider"
 
 export const SettlementImageUpload = (props) => {
@@ -44,29 +46,55 @@ export const SettlementImageUpload = (props) => {
             })
             .then(() => props.history.push("/settlement"))
         }
+
+        const useStyles = makeStyles((theme) => ({
+            root: {
+                '& > *': {
+                    margin: theme.spacing(1),
+                    background: "#EB5757",
+                    color: "#FFFFFF",
+                    width: "300px",
+                    borderRadius: "5rem"
+                },
+            },
+            buttonStyle: {
+                '& > *': {
+                    margin: theme.spacing(1),
+                    background: "#EB5757",
+                    color: "#FFFFFF",
+                    width: "180px",
+                    borderRadius: "5rem",
+                },
+            },
+        }));
+        
+        const classes = useStyles()
         
         return (
             <section className="settlement--card">
-
-                <div className="Upload">
-                    <input className="uploadImgSettlement" type="file" name="file" placeholder="Upload an image"
-                    onChange={uploadImage}
-                    />
-                    {
-                        loading ? (<h3>It's getting it ...</h3>) 
-                        : (<img className="imgSettlement" src={image} style={{ width: '100px' }} />)
-                    }
-                </div>
-                <div className="saveImageButton">
-                    <button className="saveSettlementImageButton" variant="contained" type="submit"
-                            onClick={evt => {
-                                evt.preventDefault()
-                                constructNewSettlementImage()
-                            }}
-                            className="btn btn-primary">
-                            Save Settlement
-                    </button>
-                </div>
+                <article className="uploadStyle">
+                    <div className="Upload">
+                        <input className="uploadImgSettlement" type="file" name="file" placeholder="Upload an image"
+                        onChange={uploadImage}
+                        />
+                        {
+                            loading ? (<h3>It's getting it ...</h3>) 
+                            : (<img className="imgSettlement" src={image} style={{ width: '100px' }} />)
+                        }
+                    </div>
+                </article>
+                <article className="saveSettlementButton">
+                    <div className={classes.buttonStyle}>
+                        <Button className="saveSettlementImageButton" variant="contained" type="submit"
+                                onClick={evt => {
+                                    evt.preventDefault()
+                                    constructNewSettlementImage()
+                                }}
+                                className="btn btn-primary">
+                                Save Settlement
+                        </Button>
+                    </div>
+                </article>
             </section>
         )
 }

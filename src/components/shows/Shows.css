@@ -79,6 +79,7 @@
     display: flex;
     justify-content: center;
     height: 2rem;
+    margin-left: 5rem;
 }
 
 .venueTitle { 
@@ -116,7 +117,7 @@
 .img { 
     display: flex;
     justify-content: center;
-    margin-left: -10rem;
+    margin-left: -7rem;
     margin-bottom: 2rem;
 }
 
@@ -130,7 +131,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 20rem;
+    margin-left: 14rem;
     margin-top: -5rem;
 }
 .imgSettlement { 
@@ -146,5 +147,12 @@
     padding: 0 20px;
 }
 
+.saveSettlementButton { 
+    display: flex;
+    justify-content: center;
+}
 
-
+/* .uploadStyle {
+    display: flex;
+    justify-content: center;
+} */
