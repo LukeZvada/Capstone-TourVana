@@ -11,7 +11,6 @@ export const SettlementReport = (props) => {
 
     return (
         <>
-            <h2>Settlement Image</h2>
             <section key={settlement.id} className="settlementImage">
                 <img src={settlement.attachmentUrl} />
             </section>

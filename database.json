@@ -134,15 +134,6 @@
       "id": 13
     },
     {
-      "venueName": "Red Rocks",
-      "city": "Morrison",
-      "state": "CO",
-      "date": "2020-10-24",
-      "userId": 1,
-      "dealMemoUrl": "",
-      "id": 14
-    },
-    {
       "venueName": "The State Room",
       "city": "Salt Lake City",
       "state": "UT",
@@ -150,15 +141,6 @@
       "userId": 1,
       "dealMemoUrl": "",
       "id": 15
-    },
-    {
-      "venueName": "The Knitting Factory",
-      "city": "Boise",
-      "state": "ID",
-      "date": "2020-10-28",
-      "userId": 1,
-      "dealMemoUrl": "",
-      "id": 16
     },
     {
       "venueName": "Paramount Theater",
@@ -213,6 +195,15 @@
       "userId": 1,
       "dealMemoUrl": "",
       "id": 22
+    },
+    {
+      "id": 23,
+      "venueName": "Ryman Auditorium",
+      "city": "Nashville",
+      "state": "TN",
+      "date": "2020-12-19",
+      "userId": 1,
+      "dealMemoUrl": ""
     }
   ],
   "settlement": [
@@ -300,6 +291,26 @@
       "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601008603/lzvada/gkafnoigesxf40nujrfy.png",
       "showId": 2,
       "id": 17
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601043178/lzvada/mz59hrbflpzplhamghyv.png",
+      "showId": 5,
+      "id": 18
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601044816/lzvada/w2kwohejaqkgu6aop88d.png",
+      "showId": 23,
+      "id": 19
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601929162/lzvada/mxdy1e4tpu4wbybpdda9.png",
+      "showId": 23,
+      "id": 20
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601949752/lzvada/pr7q6lzfmmccknkrsdpg.png",
+      "showId": 23,
+      "id": 21
     }
   ],
   "dealMemo": [
@@ -332,17 +343,6 @@
       "id": 4
     },
     {
-      "storeName": "Delta Airlines",
-      "city": "Atlanta",
-      "state": "GA",
-      "price": "854.21",
-      "date": "2020-10-02",
-      "userId": 1,
-      "attachementUrl": "https://res.cloudinary.com/zvada/image/upload/v1600980206/lzvada/nqgp23ktbs9letidvuep.png",
-      "category": "travel",
-      "id": 5
-    },
-    {
       "storeName": "Le Bernardin",
       "city": "New York",
       "state": "NY",
@@ -352,17 +352,6 @@
       "attachementUrl": "https://res.cloudinary.com/zvada/image/upload/v1600980752/lzvada/ymnopuemfvhf2w055shj.png",
       "category": "entertainment",
       "id": 6
-    },
-    {
-      "storeName": "Yellow Cab",
-      "city": "New York",
-      "state": "NY",
-      "price": "16.94",
-      "date": "2020-10-05",
-      "userId": 1,
-      "attachementUrl": "",
-      "category": "travel",
-      "id": 7
     }
   ]
 }
