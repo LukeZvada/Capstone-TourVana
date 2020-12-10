@@ -77,10 +77,8 @@ export const SettlementImageUpload = (props) => {
                         <input className="uploadImgSettlement" type="file" name="file" placeholder="Upload an image"
                         onChange={uploadImage}
                         />
-                        {
-                            loading ? (<h3>It's getting it ...</h3>) 
-                            : (<img className="imgSettlement" src={image} style={{ width: '100px' }} />)
-                        }
+                            <img className="imgSettlement" src={image} style={{ width: '400px' }} />
+                        
                     </div>
                 </article>
                 <article className="saveSettlementButton">

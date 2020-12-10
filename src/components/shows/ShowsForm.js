@@ -29,7 +29,7 @@ export const ShowForm = (props) => {
     }
 
     useEffect(() => {
-       getShows()
+        getShows()
     }, [])
 
     useEffect(() => {
@@ -151,10 +151,10 @@ export const ShowForm = (props) => {
                     <input className="uploadImage" type="file" name="file" placeholder="Upload an image"
                     onChange={uploadImage}
                     />
-                    {
-                        loading ? (<div className="loading">Loading...</div>) 
-                        : (<img className="img" src={image} style={{ width: '100px' }} />)
-                    }
+                    
+                        {/* loading ? (<div className="loading">Loading...</div>)  */}
+                        <img className="img" src={image} style={{ width: '300px' }} />
+                    
             </section>
             <section className={classes.buttonStyle}>
                 <Button className="saveShowButton" variant="contained" type="submit"

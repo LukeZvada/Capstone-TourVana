@@ -34,24 +34,24 @@ export const ShowList = (props) => {
 
  
     const useStyles = makeStyles((theme) => ({
-        root: {
-          '& > *': {
-            margin: theme.spacing(1),
-            color: "#EB5757",  
-            position: "fixed",
-            display: "flex",
-            bottom: 0,
-            background: "white",
-            margin: 0
-          },
-        },
-        primary: {
-          '& > *': {
-            color: "black"
-          },
+            root: {
+            '& > *': {
+                margin: theme.spacing(1),
+                color: "#EB5757",  
+                position: "fixed",
+                display: "flex",
+                bottom: 0,
+                background: "white",
+                margin: 0
+            },
+            },
+            primary: {
+            '& > *': {
+                color: "black"
+            },
         },
 
-      }));
+    }));
 
     const classes = useStyles()
 

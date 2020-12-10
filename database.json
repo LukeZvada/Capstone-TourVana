@@ -17,20 +17,11 @@
   ],
   "show": [
     {
-      "venueName": "Irvine Plaza",
-      "city": "New York",
-      "state": "NY",
-      "date": "2020-10-09",
-      "userId": 1,
-      "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600976781/lzvada/aoakmajaalqlh9mazjrr.png",
-      "id": 1
-    },
-    {
       "id": 2,
       "venueName": "Royale",
       "city": "Boston",
       "state": "MA",
-      "date": "2020-10-10",
+      "date": "2021-10-10",
       "userId": 1,
       "dealMemoUrl": ""
     },
@@ -39,7 +30,7 @@
       "venueName": "The Aura",
       "city": "Portland",
       "state": "ME",
-      "date": "2020-10-11",
+      "date": "2021-10-11",
       "userId": 1,
       "dealMemoUrl": ""
     },
@@ -48,7 +39,7 @@
       "venueName": "The Fillmore",
       "city": "Phildelphia",
       "state": "PA",
-      "date": "2020-10-12",
+      "date": "2021-10-12",
       "userId": 1,
       "dealMemoUrl": ""
     },
@@ -56,7 +47,7 @@
       "venueName": "The Anthem",
       "city": "Washington",
       "state": "DC",
-      "date": "2020-10-15",
+      "date": "2021-10-15",
       "userId": 1,
       "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600977073/lzvada/fumbesgm0idt720gd5qh.png",
       "id": 5
@@ -65,7 +56,7 @@
       "venueName": "Stage AE",
       "city": "Pittsburgh",
       "state": "PA",
-      "date": "2020-10-16",
+      "date": "2021-10-16",
       "userId": 1,
       "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600977178/lzvada/jh4a2zcr9n18j12lxftq.png",
       "id": 6
@@ -74,7 +65,7 @@
       "venueName": "Beachland Ballroom",
       "city": "Cleveland",
       "state": "OH",
-      "date": "2020-10-17",
+      "date": "2021-10-17",
       "userId": 1,
       "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600977261/lzvada/x2x71v9rwe90ffkideh1.png",
       "id": 7
@@ -83,7 +74,7 @@
       "venueName": "Newport Music Hall",
       "city": "Columbus",
       "state": "OH",
-      "date": "2020-10-18",
+      "date": "2021-10-18",
       "userId": 1,
       "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600977378/lzvada/j5uqxiyf1w0yhccn2nze.png",
       "id": 8
@@ -92,7 +83,7 @@
       "venueName": "Bogarts",
       "city": "Cincinatti",
       "state": "OH",
-      "date": "2020-10-19",
+      "date": "2021-10-19",
       "userId": 1,
       "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600977434/lzvada/whhzg02ihfled5cu2amw.png",
       "id": 9
@@ -101,7 +92,7 @@
       "venueName": "The Vogue",
       "city": "Indianapolis",
       "state": "IN",
-      "date": "2020-10-20",
+      "date": "2021-10-20",
       "userId": 1,
       "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600977602/lzvada/pfa0kbmv4vh8njwyzzkm.png",
       "id": 10
@@ -110,7 +101,7 @@
       "venueName": "Thalia Hall",
       "city": "Chicago",
       "state": "IL",
-      "date": "2020-10-21",
+      "date": "2021-10-21",
       "userId": 1,
       "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600977692/lzvada/fghci8pbislat0lklmar.png",
       "id": 11
@@ -119,7 +110,7 @@
       "venueName": "Madison Theater",
       "city": "Madison",
       "state": "WI",
-      "date": "2020-10-22",
+      "date": "2021-10-22",
       "userId": 1,
       "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600977799/lzvada/fwtq5krmrimmgor5y3vp.png",
       "id": 12
@@ -128,7 +119,7 @@
       "venueName": "Lincoln Theater",
       "city": "Lincoln",
       "state": "NE",
-      "date": "2020-10-23",
+      "date": "2021-10-23",
       "userId": 1,
       "dealMemoUrl": "",
       "id": 13
@@ -137,7 +128,7 @@
       "venueName": "The State Room",
       "city": "Salt Lake City",
       "state": "UT",
-      "date": "2020-10-25",
+      "date": "2021-10-25",
       "userId": 1,
       "dealMemoUrl": "",
       "id": 15
@@ -146,7 +137,7 @@
       "venueName": "Paramount Theater",
       "city": "Seattle",
       "state": "WA",
-      "date": "2020-10-29",
+      "date": "2021-10-29",
       "userId": 1,
       "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1600978305/lzvada/ucfbhsmpfs5mckhdjvxl.png",
       "id": 17
@@ -155,7 +146,7 @@
       "venueName": "Revolution Hall",
       "city": "Portland",
       "state": "OR",
-      "date": "2020-10-30",
+      "date": "2021-10-30",
       "userId": 1,
       "dealMemoUrl": "",
       "id": 18
@@ -164,7 +155,7 @@
       "venueName": "McDonald Theater",
       "city": "Eugene",
       "state": "OR",
-      "date": "2020-10-31",
+      "date": "2021-10-31",
       "userId": 1,
       "dealMemoUrl": "",
       "id": 19
@@ -173,7 +164,7 @@
       "venueName": "Ace of Spades",
       "city": "Sacramento",
       "state": "CA",
-      "date": "2020-11-01",
+      "date": "2021-11-01",
       "userId": 1,
       "dealMemoUrl": "",
       "id": 20
@@ -183,7 +174,7 @@
       "venueName": "The Warfield",
       "city": "San Francisco",
       "state": "CA",
-      "date": "2020-11-06",
+      "date": "2021-11-06",
       "userId": 1,
       "dealMemoUrl": ""
     },
@@ -191,19 +182,19 @@
       "venueName": "The Wiltern",
       "city": "Los Angeles ",
       "state": "CA",
-      "date": "2020-11-07",
+      "date": "2021-11-07",
       "userId": 1,
       "dealMemoUrl": "",
       "id": 22
     },
     {
-      "id": 23,
-      "venueName": "Ryman Auditorium",
+      "venueName": "The Ryman",
       "city": "Nashville",
       "state": "TN",
-      "date": "2020-12-19",
+      "date": "2021-12-18",
       "userId": 1,
-      "dealMemoUrl": ""
+      "dealMemoUrl": "https://res.cloudinary.com/zvada/image/upload/v1607620493/lzvada/znk0l7ue4lg6oyhqufkk.png",
+      "id": 23
     }
   ],
   "settlement": [
@@ -311,6 +302,61 @@
       "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601949752/lzvada/pr7q6lzfmmccknkrsdpg.png",
       "showId": 23,
       "id": 21
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601950145/lzvada/jfrmfxdts5viqjrwqcat.png",
+      "showId": 23,
+      "id": 22
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601951275/lzvada/kbfhweixnhxy9sd2absn.png",
+      "showId": 23,
+      "id": 23
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601952281/lzvada/rsub2pyp5udepm1zgxvj.png",
+      "showId": 23,
+      "id": 24
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601952741/lzvada/loueqdyhr6rs4h9iewgt.png",
+      "showId": 23,
+      "id": 25
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601953552/lzvada/q5pq2apocrksli8w93ph.png",
+      "showId": 23,
+      "id": 26
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601958968/lzvada/rfcagyjnrsru5kz5gemk.png",
+      "showId": 23,
+      "id": 27
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601959244/lzvada/dgvl0myxbwwdhvd2is6r.png",
+      "showId": 23,
+      "id": 28
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601962733/lzvada/qjwjvfnq58fxv1se5a7a.png",
+      "showId": 23,
+      "id": 29
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1601997538/lzvada/gheofwga1gdgp4wwphga.png",
+      "showId": 23,
+      "id": 30
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1606764718/lzvada/a6jt7elrinvvwew0jxm1.png",
+      "showId": 23,
+      "id": 31
+    },
+    {
+      "attachmentUrl": "https://res.cloudinary.com/zvada/image/upload/v1607620545/lzvada/lfqf4anevxhzgbofrcly.png",
+      "showId": 23,
+      "id": 32
     }
   ],
   "dealMemo": [
@@ -343,15 +389,15 @@
       "id": 4
     },
     {
-      "storeName": "Le Bernardin",
+      "storeName": "Yellow Taxi",
       "city": "New York",
       "state": "NY",
-      "price": "414.98",
-      "date": "2020-10-05",
+      "price": "16.06",
+      "date": "2020-12-18",
       "userId": 1,
-      "attachementUrl": "https://res.cloudinary.com/zvada/image/upload/v1600980752/lzvada/ymnopuemfvhf2w055shj.png",
-      "category": "entertainment",
-      "id": 6
+      "attachementUrl": "https://res.cloudinary.com/zvada/image/upload/v1607620600/lzvada/a0t11x1esk1z0yqakcdu.png",
+      "category": "travel",
+      "id": 7
     }
   ]
 }
