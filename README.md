@@ -3,7 +3,7 @@ For my front end capstone at Nashville Software School, I created an app for tou
 Material UI, Chart.js, and Cloudinary.
 
 ### Preview
-
+![Screenshot](TourvanaPreview.png)
 
 ### Setup
 1. Clone this Repository 
