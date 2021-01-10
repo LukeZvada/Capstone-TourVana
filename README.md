@@ -1,6 +1,6 @@
 ### TourVana
 For my front end capstone at Nashville Software School, I created an app for tour managers in the entertainment business that acts as a tool to allow them to easily view deal memos (contract summary), as well as upload settlement reports and expense receipts / info. For this project, I used React, Javascript, CSS, HTML,
-Material UI, Chart.js, and Cloudinary.
+Material UI, Chart.js, and Cloudinary. You can find a video demo here. https://www.youtube.com/watch?v=zSTCjRObvec&feature=youtu.be
 
 ### Preview
 ![Screenshot](TourvanaPreview.png)
